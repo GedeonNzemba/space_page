@@ -1,0 +1,56 @@
+.testLine1 {
+  position: absolute;
+  fill:#010002;
+  top: 8%;
+  left: -80px;
+}
+
+.testLine2 {
+  position: absolute;
+  top: 60%;
+  right: 28%;
+}
+
+.testLine3 {
+  position: absolute;
+  top: 18%;
+  right: 0%;
+}
+
+.testLine4 {
+  position: absolute;
+  top: 90%;
+  right: -80px;
+}
+
+.testLine5 {
+  display: none;
+  position: absolute;
+  top: 18%;
+  right: 10%;
+}
+
+@media only screen and (max-width: $break) {
+  .testLine1 {
+    top: 48%;
+    left: -110px;
+  }
+
+  .testLine2 {
+    display: none;
+  }
+
+  .testLine3 {
+    display: none;
+  }
+
+  .testLine4 {
+    // top: 18%;
+    // right: 10%;
+    display: none;
+  }
+
+  .testLine5 {
+    display: block;
+  }
+}

@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+  }
+  .main-carousel-md {
+      width: 100%;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+  }
+
+
+  
+  .carousel-image-md {
+    width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all .5s;
+  }
+  
+  .carousel-image-md img {
+  display: block;
+  width: 100%;
+  } 
+  .main-carousel-md .flickity-viewport {
+    height: 100%;
+  }
+  .carousel-image-md:not(.is-selected) {
+    transform: scale(.8);
+    border-radius: 10%;
+      z-index: -1;
+      height: 512px!important;
+      
+  }
+
+  .carousel-image-md.is-selected:hover {
+      transform: scale(1.5);
+      z-index: 100;
+      outline-offset: 2rem;
+      outline-color: #0017da;
+      border-color: #0017da;
+      overflow: visible;
+  }
+  #button{
+    position: relative;
+    cursor: pointer;
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; 
+    transition: all .2;
+  }
+  #button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#000, .2);
+  
+    
+    box-shadow: 0 1rem 2rem rgba(rgb(229, 232, 232), 0.15);
+    transform: translateY(-2px);
+  }
+  #button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+  #button:active,
+  #button:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(#000,.2);
+  }
+  #button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+  
+  
+
+
+  @keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+  
+  @media (min-width: 43.8125em) {
+      .main-carousel-md {
+          display: none;
+      }
+  }

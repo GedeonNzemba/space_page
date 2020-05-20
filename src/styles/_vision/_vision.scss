@@ -1,0 +1,790 @@
+.visionHeroContainer {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.visionHero {
+  @include flexColumn;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  height: inherit;
+  width: inherit;
+  left: 0;
+  top: 0;
+  background-color: $silver;
+  color: $blue;
+
+    // @include for-phone-only {
+    //   @include flexColumn;
+    //   height: auto;
+    // }  
+    @include for-tablet-portrait-only {
+      @include flexColumn;
+      height: auto;
+    }
+}
+.content {
+  @include flexColumn;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+  justify-content: center;
+  padding: 1% 5% 1% 5%;
+  
+    @include for-phone-only {
+      @include flexColumn;
+      height: auto;
+      left: unset;
+      top: unset;
+      transform: unset;
+      position: relative;
+      padding: 0;
+    }
+    @include for-tablet-portrait-only {
+      @include flexColumn;
+      height: auto;
+      left: unset;
+      top: unset;
+      transform: unset;
+      position: relative;
+      padding: 0;
+    }
+}
+.content__img {
+  width: 300px;
+  height: 375px;
+  max-width: 300px;
+  max-height: 375px;
+  margin-top: -300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  will-change: transform;
+}
+.content__title {
+  @include heading;
+  position: relative;
+  z-index: 10000;
+  padding: 0% 5% 0% 5%;
+  margin: 0;
+  pointer-events: none;
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+    @include for-tablet-landscape-only {
+      font-size: $xlarge-body-copy;
+    }
+    @include for-xsmall-desktop-up {
+      font-size: $sub-heading-copy;
+    }
+    @include for-medium-desktop-up {
+      font-size: $main-heading-copy;
+    }
+}
+.content__title_mobile {
+  @include brownFourHundred;
+  display: none;
+  text-align: left;
+  font-size: 54px;
+  padding: 5% 5%;
+  pointer-events: none;
+  margin: 5% 0;
+
+    @include for-phone-only {
+      display: block;
+      margin: 5% 0 7% 0;
+      font-size: $sub-heading-copy;
+    }
+    @include for-tablet-portrait-only {
+      display: block;
+      padding: 2.5%;
+      margin: 2.5% 0 10% 0;
+    }
+}
+.scrollSVG {
+  z-index: 10000;
+  margin-top: 100px;
+  position: relative;
+}
+.scrollSVGText {
+  @include bodyCopy;
+  margin-bottom: 30px;
+}
+.heroFooter {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 5% 2% 5%;
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+    @include for-tablet-landscape-only {
+      padding: 0 5% 3% 5%;
+    }
+}
+.heroFooterText {
+  @include bodyCopy;
+  @include justifySBAndAlignCenter;
+  display: flex;
+}
+.heroFooterSocials {
+  @include flexRow;
+  @include justifySBAndAlignCenter;
+  width: 120px;
+}
+.visionHeroCopy {
+  @include heading;
+  width: 45%;
+}
+.visionSectionsContainer {
+  @include flexColumn;
+
+    @include for-big-desktop-up {
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+}
+.visionSectionImageContainer{
+  @include justifyAndAlignCenter;
+  width: 50%;
+  display: flex;
+}
+.visionMainSectionContainer {
+  @include flexRow;
+  color: $blue;
+  height: 80vh;
+  width: 100%;
+  margin: 5% 0 3% 0;
+
+    @include for-phone-only {
+      @include flexColumn;
+      height: auto;
+    }
+    @include for-tablet-portrait-only {
+      @include flexColumn;
+      height: auto;
+      margin-top: 35%;
+    }
+    @include for-tablet-landscape-only {
+      height: 70vh;
+      margin: 0;
+    }
+}
+.visionMainSectionInfoContainer {
+  @include flexColumn;
+  @include justifyCenterAndAlignBasline;
+  width: 50%;
+  padding: 8% 7.5% 7.5% 7.5%; 
+
+    @include for-phone-only {
+      width: 100%;
+      padding: 0 7.5% 0 0;
+      margin: 15% 0 0 0; 
+    }  
+    @include for-tablet-portrait-only {
+      width: 100%;
+      padding: 0 7.5% 0 0;
+      margin: 8% 0 0% 0; 
+    }
+    @include for-tablet-landscape-only {
+      padding: 7.5% 7.5% 7.5% 7.5%;
+    }
+}
+.visionSubSectionContainer {
+  @include flexRow;
+  color: $blue;
+  height: 80vh;
+  width: 100%;
+
+    @include for-phone-only {
+      height: auto;
+      display: flex;
+      flex-direction: column-reverse;
+    }   
+    @include for-tablet-portrait-only {
+      height: auto;
+      display: flex;
+      flex-direction: column-reverse;
+    } 
+    @include for-tablet-landscape-only {
+      height: 60vh;
+    }
+    @include for-xsmall-desktop-only {
+      height: 85vh;
+    }
+    @include for-big-desktop-up {
+      height: 90vh;
+    }
+}
+.visionSubSectionInfoContainerLeft {
+  @include flexColumn;
+  @include justifyCenterAndAlignBasline;
+  width: 50%;
+  padding: 10% 7.5% 10% 12%;
+
+    @include for-phone-only {
+      width: 100%;
+      padding: 0 7.5% 0 0;
+      margin: 10% 0 0 0;
+    }
+    @include for-tablet-portrait-only {
+      width: 100%;
+      padding: 0 7.5% 0 0;
+      margin: 10% 0 0 0;
+    }
+}
+.visionSubSectionInfoContainerRight {
+  @include flexColumn;
+  @include justifyCenterAndAlignBasline;
+  width: 50%;
+  padding: 10% 12% 10% 7.5%;
+}
+.visionSectionInfoHeading {
+  @include heading;
+
+    @include for-phone-only {
+      width: 90%;
+      text-align: left;
+      padding: 0 5%;
+      font-size: 38px;
+    }
+    @include for-tablet-portrait-only {
+      width: 100%;
+      text-align: left;
+      padding: 0 3%;
+      font-size: $sub-heading-copy;
+    }
+    @include for-tablet-landscape-only {
+      margin-bottom: 1rem;
+      font-size: 30px;
+    }
+    @include for-xsmall-desktop-only {
+      font-size: $xlarge-body-copy;
+    }
+    @include for-small-desktop-only {
+      font-size: $sub-heading-copy;
+    }
+    @include for-medium-desktop-up {
+      font-size: $main-heading-copy;
+    }
+}
+.visionSubSectionInfoHeading {
+  @include subHeading;
+
+    @include for-phone-only {
+      text-align: left;
+      padding-left: 5%;
+      font-size: 32px;
+    }
+    @include for-tablet-portrait-only {
+      text-align: left;
+      padding-left: 3%;
+    }
+    @include for-tablet-landscape-only {
+      margin-bottom: 1rem;
+      font-size: $large-body-copy;
+    }
+    @include for-xsmall-desktop-only {
+      font-size: $xlarge-body-copy;
+    }
+
+}
+.visionSectionInfoBody {
+  @include bodyCopy;
+
+    @include for-phone-only {
+      font-size: 18px;
+      width: 100%;
+      text-align: left;
+      padding-left: 5%;
+    }
+    @include for-tablet-portrait-only {
+      font-size: $large-body-copy;
+      width: 100%;
+      text-align: left;
+      padding-left: 3%;
+    }
+    @include for-tablet-landscape-only {
+      font-size: $xxxsmall-body-copy;
+    }
+    @include for-xsmall-desktop-only {
+      font-size: $xsmall-body-copy;
+    }
+    @include for-small-desktop-only {
+      font-size: $base-font-size;
+    }
+}
+.visionTestimonialContainer {
+  @include justifyAndAlignCenter;
+  display: flex;
+  text-align: center;
+  position: relative;
+  height: 30vh;
+  width: 100%;
+  padding: 0 2%;
+  margin: 0 -1%;
+
+    
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+    @include for-tablet-landscape-only {
+      max-height: 200px;
+    }
+    @include for-xsmall-desktop-up {
+      margin: 2% 0;
+      min-height: 200px;
+    }
+    @include for-medium-desktop-only {
+      margin: 2% 0;
+      min-height: 350px;
+    }
+}
+.visionTestimonialCopy {
+  @include mainQuote;
+  width: 70%;
+
+    @include for-tablet-landscape-only {
+      width: 60%;
+      font-size: $body-copy;
+    }
+    @include for-xsmall-desktop-up {
+      width: 55%;
+      font-size: $large-body-copy;
+    }
+    @include for-medium-desktop-only {
+      width: 60%;
+      font-size: $large-body-copy;
+    }
+}
+.sectionImageContainerRight{
+  @include justifyAndAlignCenter;
+  width: 50%;
+  display: flex;
+  padding-right: 5%;
+}
+.sectionImageContainerLeft{
+  @include justifyAndAlignCenter;
+  width: 50%;
+  display: flex;
+  padding-Left: 5%;
+}
+.weaverImageContainer{
+  padding-right: 12%;
+
+    @include for-phone-only {
+      width: 100%;
+      padding: 0;
+      margin: 25% 0 20% 0;
+      justify-content: flex-end;
+    }
+    @include for-tablet-portrait-only {
+      width: 100%;
+      padding: 0;
+      margin: 20% 0 15% 0;
+      justify-content: flex-end;
+    }
+}
+.securityImageContainer{
+  justify-content: flex-start;
+
+    @include for-phone-only {
+      width: 100%;
+      justify-content: flex-end;
+      margin-bottom: 5%;
+    }
+    @include for-tablet-portrait-only {
+      width: 100%;
+      justify-content: flex-end;
+      margin: -20% 0 15%;
+    }
+}
+.appPictureMobileImageContainer {
+    
+  @include for-phone-only {
+    justify-content: flex-start;
+    padding: 0 5% 0 0;
+    margin: 5% 0 20% 0;
+  }
+  @include for-tablet-portrait-only {
+    justify-content: flex-start;
+    padding: 0 5% 0 0;
+    margin: -20% 0 15% 0;
+  }
+}
+.securityBasicSection {
+  margin: 5% 0;
+}
+.pullQuote {
+  @include subQuote;
+  
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+    @include for-tablet-landscape-only {
+      font-size: 14px;
+      max-height: 100px;
+    }
+    @include for-small-desktop-only {
+      min-height: 300px;
+    }
+    @include for-medium-desktop-only {
+      min-height: 250px;
+    }
+    @include for-big-desktop-up {
+      min-height: 100px;
+      max-height: 100px;
+    }
+}
+.weaverPullQuote {
+  width: 30%;
+  margin-top: -1%;
+  transform: translateX(182%);
+
+    @include for-tablet-landscape-only {
+      margin-top: 1%;
+    }	
+    @include for-xsmall-desktop-only {
+      margin-top: 3%;
+    }
+    @include for-small-desktop-only {
+      margin-top: 3%;
+    }
+    @include for-medium-desktop-only {
+      margin-top: 2%;
+    }
+    @include for-big-desktop-up {
+      margin-top: -3%;
+    }
+}
+.cameraPullQuote {
+  width: 30%;
+  margin-top: 7%;
+  transform: translateX(182%);
+  
+    @include for-tablet-landscape-only {
+      width: 33%;
+      margin-top: 3%;
+      transform: translateX(160%);
+    }
+    @include for-xsmall-desktop-only {
+      width: 30%;
+      margin-top: 3%;
+      transform: translateX(182%);
+    }
+    @include for-medium-desktop-only {
+      margin-top: 5%;
+    }
+    @include for-big-desktop-up {
+      width: 30%;
+      margin-top: 0%;
+      transform: translateX(182%);
+    }
+}
+.guardsPullQuote {
+  width: 30%;
+  transform: translateX(25%);
+
+    @include for-tablet-landscape-only {
+      margin-top: 2%;
+    }	
+    @include for-small-desktop-only {
+      margin-top: 3%;
+    }
+    @include for-medium-desktop-only {
+      margin-top: 3%;
+    }
+    @include for-big-desktop-up {
+      margin-top: -2%;
+    }
+}
+.biometricPullQuote {
+  width: 30%;
+  transform: translateX(200%);
+  
+    @include for-tablet-landscape-only {
+      width: 22%;
+      margin-top: 3%;
+      transform: translateX(216%);
+    }	
+    @include for-xsmall-desktop-only {
+      width: 23%;
+      margin-top: 4%;
+    }
+    @include for-small-desktop-only {
+      width: 23%;
+      margin-top: 7%;
+    }
+    @include for-medium-desktop-only {
+      width: 22%;      
+      margin-top: 6%;
+      transform: translateX(215%);
+    }
+    @include for-big-desktop-up {
+      width: 22%;      
+      margin-top: 1%;
+      transform: translateX(210%);
+    }
+}
+.signInPullQuote {
+  width: 30%;
+  transform: translateX(65%);
+
+    @include for-tablet-landscape-only {
+      margin-top: 4%;
+    }	
+    @include for-xsmall-desktop-only {
+      margin-top: 5%;
+    }
+    @include for-small-desktop-only {
+      margin-top: 8%;
+    }
+    @include for-medium-desktop-only {
+      margin-top: 7%;
+    }
+    @include for-big-desktop-up {
+      margin-top: 2%;
+    }
+}
+.generatorPullQuote {
+  transform: translateX(55%);
+
+    @include for-tablet-landscape-only {
+      margin-top: 1%;
+    }	  
+    @include for-small-desktop-only {
+      margin-top: 3%;
+    }
+    @include for-medium-desktop-only {
+      margin-top: 3%; 
+    }
+    @include for-big-desktop-up {
+      margin-top: -4%;
+    }
+}
+.modernLifeImageContainer{
+  justify-content: start;
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+}
+.vision_hero_topImage {
+  display: none;
+
+    @include for-phone-only {
+      @include flexRow;
+      justify-content: flex-end;
+      width: 100;
+    }
+    @include for-tablet-portrait-only {
+      @include flexRow;
+      justify-content: flex-end;
+      width: 100;
+    }
+}
+.vision_hero_bottomImage {
+  display: none;
+
+    @include for-phone-only {
+      @include flexRow;
+      width: 50%;
+    }
+    @include for-tablet-portrait-only {
+      @include flexRow;
+      width: 50%;
+    }
+}
+.visionOptionContainer {
+  display: none;
+
+    @include for-phone-only {
+      display: flex;
+      padding-left: 20%;
+      margin-top: 4%;
+    }
+    @include for-tablet-portrait-only {
+      display: flex;
+      padding-left: 16%;
+      margin-top: 4%;
+    }
+}
+.visionUnitOptionSubContainer {
+  
+    @include for-phone-only {
+      @include flexRow;
+      position: relative;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      top: 0;
+      left: 0;
+    }
+    @include for-tablet-portrait-only {
+      @include flexRow;
+      position: relative;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      top: 0;
+      left: 0;
+    }
+}
+.nonMobileText{
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+}
+.nonDesktopText {
+  display: none;
+
+    @include for-phone-only {
+      display: flex;
+      text-align: left;
+    }
+    @include for-tablet-portrait-only {
+      display: flex;
+      text-align: left;
+    }
+}
+.mobileFounderSliderHeading {
+  display: none;
+}
+.mobileFounderSection {
+  display: none;
+
+    @include for-phone-only {
+      @include flexColumn;
+      justify-content: space-between;
+    }
+    @include for-tablet-portrait-only {
+      @include flexColumn;
+      justify-content: space-between;
+      margin-bottom: 10%;
+    }
+}
+.mobileFounderSubSection {
+  display: flex;
+}
+.mobileFounderSubContainer {
+  @include flexRow;
+  padding-top: 10%;
+
+    @include for-phone-only {
+      padding: 0;
+      margin: 10% 0 20% 0;
+    }
+    @include for-tablet-portrait-only {
+      margin: 10% 0 10% 0;
+    }
+}
+.mobileFounderCopyCont {
+  @include flexColumn;
+  justify-content: center;
+  padding: 20px;
+}
+.mobileFounderName {
+  display: flex;
+  @include colorBorderBottomBlue;
+  font-family: 'Brown';
+  font-size: $xlarge-body-copy;
+  padding-bottom: 5%;
+
+    @include for-phone-only {
+      font-size: 18px;
+    }
+}
+.mobileFounderDesc {
+  display: flex;
+  padding-top: 3%;
+  font-family: 'akkurat';
+  font-size: $body-copy;
+  color: $blue;
+
+    @include for-phone-only {
+      font-size: 15px;
+    }
+}
+.appFeaturesMobileAnimation {
+  display: none;
+
+    @include for-phone-only {
+      display: flex;
+    }
+    @include for-tablet-portrait-only {
+      display: flex;
+    }
+}
+.cctv {
+  
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+}
+.guards {
+  
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+}
+.biometric {
+  
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+}
+.guestSignIn {
+  
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+}
+.generator {
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+}

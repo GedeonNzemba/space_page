@@ -1,0 +1,36 @@
+{
+  "basicSections": {
+    "homePage": {
+      "security": {
+        "heading": "Our security is next-level.",
+        "body": "We take security very seriously. That’s why we provide 24/7 guards, biometric fingerprint scanners, state of the art surveillance and have partnerships with leading rapid response companies.",
+        "buttonTitle": "Proper Security",
+        "img": ""
+      },
+      "community": {
+        "heading": "We’re creating a proper community.",
+        "body": "We’ve partnered with leading architects to design our spaces to promote interaction with fellow residents.",
+        "buttonTitle": "Proper Community",
+        "img": ""
+      },
+      "functional": {
+        "heading": "Designed to be functional.",
+        "body": "We’ve partnered with leading interior designers to focus on functionality. Everything fits in properly.",
+        "buttonTitle": "Proper Design",
+        "img": ""
+      },
+      "app": {
+        "heading": "Swift By Proper Living.",
+        "body": "Residents get exclusive access to our app “Swift”. We’ve built it as your digital door to everything Proper Living. From social features to security assistance, all its functions enhance your time with us.",
+        "buttonTitle": "Proper App",
+        "img": ""
+      },
+      "blog": {
+        "heading": "Proper Living Blog.",
+        "body": "Our co-founder Caspar Lee is obsessed with creating content online so we decided to put him in charge of our blog.",
+        "buttonTitle": "Have a Read",
+        "img": ""
+      }
+    }
+  }
+}

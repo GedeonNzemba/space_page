@@ -1,0 +1,43 @@
+.navlist {
+  @include flexRow;
+  list-style: none;
+  font-family: "akkurat";
+}
+.navitem {
+  list-style: none;
+  margin: 1.4rem;
+}
+.navitem a {
+  color: $blue;
+//   border-bottom: solid $light rgba(255, 255, 255, 0);
+//   text-decoration: none;
+// }
+// .navitem:hover a {
+//   border-bottom: solid $blue 1px;
+}
+
+.activeLink {
+  border-bottom: solid $blue 2px;
+}
+
+@media only screen and (max-width: $desktopBreakPoint) {
+  .navitem {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: $break) {
+  
+  .navlist {
+    flex-direction: column;
+  }
+  .navitem a {
+    color: $light;
+    font-size: 20px;
+  }
+  .activeLink {
+    border-bottom: solid $orange 2px;
+      color: $orange !important;   
+  }
+
+}

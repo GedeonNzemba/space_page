@@ -1,0 +1,593 @@
+[data-scroll] {
+	will-change: transform;
+}
+.imageContent {
+	@include flexColumn;
+	position: relative;
+	align-items: center;
+	
+		@include for-medium-desktop-up {
+			max-width: 1920px;
+			margin: 0 auto;
+		}
+}
+.imageAnimationItem {
+	@include flexColumn;
+	position: relative;
+	max-width: 100%;
+}
+@mixin item__img_wrap {
+	overflow: hidden;
+	width: 100%;
+	height: 600px;
+	will-change: transform;
+}
+.item__img {
+	--overflow: 40px;
+	height: calc(100% + (2 * var(--overflow)));
+	top: calc( -1 * var(--overflow));
+	width: 100%;
+	position: absolute;
+	background-image: var(--image);
+	background-size: cover;
+	background-position: 50% 0%;
+	will-change: transform;
+}
+.item__img__t1 {
+	--overflow: 60px;
+}
+.item__img__t2 {
+	--overflow: 80px;
+}
+.item__img__t3 {
+	--overflow: 120px;
+}
+.item__img__t4 {
+	--overflow: 60px;
+}
+.item__img__t5 {
+	--overflow: 80px;
+}
+.item__img__t6 {
+	--overflow: 120px;
+}
+.item__img__t7 {
+	--overflow: 120px;
+}
+
+// vision page media
+.modernLifeWrap {
+	@include item__img_wrap();
+	--aspect-ratio: 60/75;
+	--image: url('../images/20.png');
+}
+.weaverWrap {
+	@include item__img_wrap(); 
+	--aspect-ratio: 60/75;
+	--image: url('../images/19.png');
+}
+.securityWrap {
+	@include item__img_wrap();
+	--aspect-ratio: 60/75;
+	--image: url('../images/18.png');
+}
+.camerasWrap {
+	@include item__img_wrap();
+	--aspect-ratio: 60/75;
+	--image: url('../images/17.png');
+}
+.guardsWrap {
+	@include item__img_wrap();
+	--aspect-ratio: 60/75;
+	--image: url('../images/16.png');
+}
+.biometricWrap {
+	@include item__img_wrap();
+	--aspect-ratio: 60/75;
+	--image: url('../images/15.png');
+}
+.guestWrap {
+	@include item__img_wrap();
+	--aspect-ratio: 60/75;
+	--image: url('../images/14.png');
+}
+.generatorWrap {
+	@include item__img_wrap();
+	--aspect-ratio: 60/75;
+	--image: url('../images/13.png');
+}
+.mobileHeroTop{
+	@include item__img_wrap();
+	width: 219px;
+	height: 254px;
+	--image: url('../images/mobileHeroTop.png');
+
+		@include for-phone-only {
+			width: 200px;
+			height: 250px;
+		}
+		@include for-tablet-portrait-only {
+			width: 260px;
+			height: 310px;
+		}
+}
+.mobileHeroBottom{
+	@include item__img_wrap();
+	width: 252px;
+	height: 274px;
+	--image: url('../images/mobileHeroBottom.png');
+
+		@include for-phone-only {
+			width: 240px;
+			height: 270px;
+		}
+		@include for-tablet-portrait-only {
+			width: 332px;
+			height: 372px;
+		}
+}
+.casparMobilePic{
+	@include item__img_wrap();
+	min-width: 180px;
+	height: 100%;
+	--image: url('../images/Caspar_lee.png');
+	
+		@include for-phone-only {
+			min-width: 163px;
+			min-height: 191px;
+		}
+		@include for-tablet-portrait-only {
+			min-width: 250px;
+			min-height: 280px;
+		}
+}
+.benjiMobilePic{
+	@include item__img_wrap();
+	min-width: 180px;
+	height: 100%;
+	--image: url('../images/benji.png');
+
+		@include for-phone-only {
+			min-width: 163px;
+			min-height: 191px;
+		}
+		@include for-tablet-portrait-only {
+			min-width: 250px;
+			min-height: 280px;
+		}
+}
+.visionMobileAppPic{
+	@include item__img_wrap();
+	width: 800px;
+	--aspect-ratio: 60/75;
+	--image: url('../images/12.png');
+}
+.visionModernLifeWrap {
+	@include visionImageProperties;
+	width: 948px;
+	height: 646px;
+	--image: url('../images/20.png');
+  
+	  @include for-tablet-landscape-only {
+		height: 446px;
+	  }
+	  @include for-xsmall-desktop-only {
+		height: 546px;
+	  }
+}
+.visionWeaverWrap {
+	@include visionImageProperties;
+	max-width: 700px;
+	height: 541px;
+	--image: url('../images/19.png');
+	
+		@include for-phone-only {
+			width: 269px;
+			height: 279px;
+		}
+		@include for-tablet-portrait-only {
+			width: 448px;
+			height: 446px;
+		}
+		@include for-tablet-landscape-only {
+			height: 341px;
+		}
+		@include for-xsmall-desktop-only {
+			height: 500px;
+		}
+}
+.casparLeeFounderSliderImage {
+	@include item__img_wrap();
+	width: 432px;
+	height: 568px;
+	--image: url('../images/Caspar_lee.png');
+	transition: all 1.2s ease-in-out;
+
+		@include for-phone-only {
+			display: none;
+		}
+		@include for-tablet-portrait-only {
+			display: none;
+		}
+		@include for-tablet-landscape-only {
+			width: 200px;
+			height: 310px;
+		}	
+		@include for-xsmall-desktop-only {
+			width: 270px;
+      		height: 400px;     
+		}
+		@include for-small-desktop-only {
+			width: 332px;
+			height: 468px; 
+		}   
+}
+.benjiFounderSliderImage {
+	@include item__img_wrap();
+	width: 432px;
+	height: 568px;
+	--image: url('../images/benji.png');
+		
+		@include for-phone-only {
+			display: none;
+		}
+		@include for-tablet-portrait-only {
+			display: none;
+		}
+		@include for-tablet-landscape-only {
+			width: 200px;
+			height: 310px;
+		}
+		@include for-xsmall-desktop-only {
+			width: 270px;
+			height: 400px;      
+		}
+		@include for-small-desktop-only {
+			width: 332px;
+			height: 468px; 
+		}  
+}
+.visionSecurityWrap {
+	@include visionImageProperties;
+	width: 948px;
+	height: 541px;
+	--image: url('../images/18.png');
+		
+		@include for-phone-only {
+			width: 269px;
+			height: 279px;
+		}
+		@include for-tablet-portrait-only {
+			width: 448px;
+			height: 446px;
+	  	}
+		@include for-tablet-landscape-only {
+			height: 341px;
+		}
+		@include for-xsmall-desktop-only {
+			height: 441px;
+		}  
+}
+.visionCamerasWrap {
+	@include visionImageProperties;
+	width: 848px;
+	height: 541px;
+	--image: url('../images/17.png');
+  
+		@include for-phone-only {
+			display: none;
+		}
+		@include for-tablet-portrait-only {
+			display: none;
+		}
+		@include for-tablet-landscape-only {
+			height: 341px;
+		}
+		@include for-xsmall-desktop-only {
+			height: 441px;
+		}
+}
+.visionGuardsWrap {
+	@include visionImageProperties;
+	width: 848px;
+	height: 541px;
+	--image: url('../images/16.png');
+  
+		@include for-phone-only {
+			display: none;
+		}
+		@include for-tablet-portrait-only {
+			display: none;
+		}
+		@include for-tablet-landscape-only {
+			height: 341px;
+		}
+		@include for-xsmall-desktop-only {
+			height: 441px;
+		}
+}
+.visionBiometricWrap {
+	@include visionImageProperties;
+	width: 848px;
+	height: 541px;
+	--image: url('../images/15.png');
+  
+		@include for-phone-only {
+			display: none;
+		}
+		@include for-tablet-portrait-only {
+			display: none;
+		}
+		@include for-tablet-landscape-only {
+			height: 341px;
+		}
+		@include for-xsmall-desktop-only {
+			height: 441px;
+		}
+}
+.visionGuestWrap {
+	@include visionImageProperties;
+	width: 848px;
+	height: 541px;
+	--image: url('../images/14.png');
+  
+		@include for-phone-only {
+			display: none;
+		}
+		@include for-tablet-portrait-only {
+			display: none;
+		}
+		@include for-tablet-landscape-only {
+			height: 341px;
+		}
+		@include for-xsmall-desktop-only {
+			height: 441px;
+		}
+}
+.visionGeneratorWrap{
+	@include visionImageProperties;
+	width: 848px;
+	height: 541px;
+	--image: url('../images/13.png');
+  
+		@include for-phone-only {
+			display: none;
+		}
+		@include for-tablet-portrait-only {
+			display: none;
+		}
+		@include for-tablet-landscape-only {
+			height: 341px;
+		}
+		@include for-xsmall-desktop-only {
+			height: 441px;
+		}
+}
+.visionMobileAppPic {
+	@include visionImageProperties;
+	width: 100%;
+	height: 646px;
+	--image: url('../images/12.png');
+  
+		@include for-phone-only {
+			width: 269px;
+			height: 279px;
+		}  
+		@include for-tablet-portrait-only {
+			width: 448px;
+			height: 446px;
+		}
+		@include for-tablet-landscape-only {
+			height: 446px;
+		}
+		@include for-xsmall-desktop-only {
+			width: 548px;
+			height: 546px;
+		}
+}
+
+// home page media
+.properSpacesSectionImage {
+	@include item__img_wrap();
+	--image: url('../images/space.png');
+
+    @include for-tablet-landscape-only {
+      max-width: 600px;
+      max-height: 308px;
+    }
+    @include for-xsmall-desktop-only {
+      max-width: 675px;
+      max-height: 328px;
+    }
+    @include for-small-desktop-only {
+      max-width: 775px;
+      max-height: 328px;
+    }
+    @include for-medium-desktop-only {
+      max-width: 775px;
+      max-height: 428px;
+	}
+	@include for-big-desktop-up {
+		max-width: 1075px;
+		max-height: 528px;
+	}
+}
+.homeSecuritySection {
+	@include item__img_wrap();
+	width: 960px;
+	height: 600px; 
+	--image: url('../images/security.png');
+	  
+		@include for-phone-only {
+			width: 269px;
+			height: 280px;
+		}
+		@include for-tablet-portrait-only {
+			width: 459px;
+			height: 470px;
+			margin-top: 20%;
+		}
+		@include for-tablet-landscape-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-xsmall-desktop-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-small-desktop-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-medium-desktop-only { 
+			width: 830px;
+			height: 470px;
+		}
+}
+.homeCommunitySection {
+	@include item__img_wrap();
+	width: 960px;
+	height: 600px; 
+	--image: url('../images/properCommunity.png');
+	
+		@include for-phone-only {
+			width: 269px;
+			height: 280px;
+		}
+		@include for-tablet-portrait-only {
+			width: 459px;
+			height: 470px;
+		}
+		@include for-tablet-landscape-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-xsmall-desktop-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-small-desktop-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-medium-desktop-only { 
+			width: 830px;
+			height: 470px;
+		}
+}
+.homeFunctionalSection {
+	@include item__img_wrap();
+	width: 960px;
+	height: 600px; 
+	--image: url('../images/functionalDesign.png');
+
+		@include for-phone-only {
+			width: 269px;
+			height: 280px;
+		}
+		@include for-tablet-portrait-only {
+			width: 459px;
+			height: 470px;
+		}
+		@include for-tablet-landscape-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-xsmall-desktop-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-small-desktop-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-medium-desktop-only { 
+			width: 830px;
+			height: 470px;
+		}
+}
+.homeAppSection {
+	@include item__img_wrap();
+	width: 960px;
+	height: 600px; 
+	--image: url('../images/appMockup.png');
+
+		@include for-phone-only {
+			width: 269px;
+			height: 280px;
+		}
+		@include for-tablet-portrait-only {
+			width: 459px;
+			height: 470px;
+		}
+		@include for-tablet-landscape-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-xsmall-desktop-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-small-desktop-only {
+			width: 800px;
+			height: 440px;
+		}
+		@include for-medium-desktop-only { 
+			width: 830px;
+			height: 470px;
+		}
+}
+.homeBlogSection {
+	@include item__img_wrap();
+	width: 960px;
+	height: 600px; 
+	--image: url('../images/properBlog.png');
+
+		@include for-phone-only {
+			width: 341px;
+			height: 341px;
+		}
+		@include for-tablet-portrait-only {
+			width: 510px;
+			height: 500px;
+		}
+		@include for-tablet-landscape-only {
+			width: 580px;
+			height: 400px;
+		}
+		@include for-xsmall-desktop-only {
+			width: 680px;
+			height: 440px;
+		}
+		@include for-small-desktop-only {
+			width: 710px;
+			height: 440px;
+		}
+		@include for-medium-desktop-only { 
+			width: 830px;
+			height: 470px;
+		}
+}
+.contactFormMap {
+	width: 100%;
+	height: 100%;
+	max-width: 525px;
+	max-height: 501px;
+
+		@include for-tablet-landscape-only {
+			max-width: 350px;
+			max-height: 326px;
+		}
+		@include for-xsmall-desktop-only {
+			max-width: 350px;
+			max-height: 326px;
+		}
+		@include for-small-desktop-only {
+			max-width: 375px;
+			max-height: 351px;
+		}
+		@include for-medium-desktop-only {
+			max-width: 450px;
+			max-height: 426px;
+		}
+}

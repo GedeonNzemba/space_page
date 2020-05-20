@@ -1,0 +1,73 @@
+.svgContainer {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: none;
+  stroke: $blue; //line colour before change
+  transition: stroke $colourChangeDuration ease-in-out;
+}
+.container {
+  @include flexColumn;
+  @include justifySBAndAlignCenter;
+  position: relative;
+  background: linear-gradient(to right, $silver 50%, $blue 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: $blue;
+  transition: background-position $colourChangeDuration ease,color $colourChangeDuration ease-in-out;
+  cursor: none;
+  width: 100vw;
+  height: 100vh;
+  padding: 2%;
+  padding-right: 4%;
+  padding-left: 4%;
+  overflow: hidden;
+}
+
+.subcontainer {
+  @include flexRow;
+  @include justifyAndAlignCenter;
+  width: 100%;
+}
+
+.bottomInfoContainer {
+  @include flexRow;
+  @include colorBorderBottomBlue;
+  transition: border-top $colourChangeDuration ease,color $colourChangeDuration ease;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2px;
+}
+
+.topInfoContainer {
+  @include flexRow;
+  @include colorBorderBottomBlue;
+  transition: border-bottom $colourChangeDuration ease,color $colourChangeDuration ease;
+  justify-content: space-between;
+  padding-bottom: 2px;
+  width: 100%;
+}
+
+.imageContainer {
+  width: 500px;
+  height: 550px;
+}
+
+@media only screen and (max-width: $break) {
+  .container {
+    padding: 7%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .bottomInfoContainer {
+    padding-top: 10px;
+  }
+
+  .topInfoContainer {
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,63 @@
+.basicSectionLeftContainer {
+  @include flexRow;
+  color: $blue;
+  height: 80vh;
+  width: 100%;
+}
+.basicSectionRightContainer {
+  @include flexRow;
+  color: $blue;
+  height: 80vh;
+  width: 100%;
+}
+.sectionInfoContainer {
+  @include flexColumn;
+  @include justifyCenterAndAlignBasline;
+  width: 50%;
+  padding: 10% 5% 10% 5%;
+}
+.sectionInfoHeading {
+  @include brownFourHundred;
+  font-size: 54px;
+}
+.sectionInfoBody{
+  font-size: 20px;
+  width: 100%;
+  margin: 0;
+}
+.sectionImageContainer {
+  @include justifyAndAlignCenter;
+  width: 50%;
+  display: flex;
+}
+.sectionImage {
+  width: 100%;
+}
+.basicSectionParagraph {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: $break) {
+  
+  .sectionInfoContainer {
+    width: 100%;
+    padding: 0% 8% 8% 8%;
+  }
+  .sectionImageContainer {
+    width: 100%;
+    padding: 8%;
+  }
+  .sectionImageLeftContainer {
+    padding-left: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sectionImageRightContainer {
+    padding-right: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .sectionInfoHeading {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,661 @@
+.svgVisionBase {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    z-index: 250;
+    pointer-events: none;
+    stroke: $blue;
+}
+.svgVisionBrandmarkBase {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    z-index: 250;
+    pointer-events: none;
+}
+.svgVisionHeroTop {
+    right: 9%;
+    transform: translateY(-26vh);
+    
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            right: 4%;
+            transform: translateY(-25vh) scale(1 - 0.4);        
+        }
+        @include for-xsmall-desktop-only {
+            right: 4%;
+            transform: translateY(-26vh) scale(1 - 0.3);
+        }
+        @include for-small-desktop-only {
+            transform: translateY(-26vh) scale(1 - 0.2);
+        }
+        @include for-medium-desktop-only {
+            right: 4.5%;
+            transform: translateY(-26vh) scale(1 - 0.2);
+        }
+}
+.svgVisionHeroBottom {
+    transform: translateY(-16vh) rotate(-5deg);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            left: -6%;
+            transform: translateY(-220%) scaleX(1 - 0.4);         
+        }
+        @include for-xsmall-desktop-only {
+            left: -1%;
+            transform: translateY(-220%) scaleX(1 - 0.3);        
+        }
+        @include for-small-desktop-only {
+            left: 1%;
+            transform: translateY(-16vh) scale(1 - 0.2) rotate(-5deg);
+        }
+        @include for-medium-desktop-only {
+            left: 1%;
+            transform: translateY(-16vh) rotate(-5deg) scale(1 - 0.2);
+        }
+}
+.svgVisionOne {
+    right: 50%;
+    transform: translateY(5vh) scale(1.2);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            display: block;
+            right: 40%;
+            transform: translateY(-6vh) scale(1 - 0.4);
+        }
+        @include for-xsmall-desktop-only {
+            right: 44%;
+            transform: translateY(2vh) scale(1 - 0.3);
+        }
+        @include for-small-desktop-only {
+            right: 47%;
+            transform: translateY(0vh) scale(1);
+        }
+        @include for-medium-desktop-only {
+            right: 46%;
+            transform: translateY(-1vh) scale(1);
+        }
+        @include for-big-desktop-up {
+            right: 48%;
+            transform: translateY(11vh) scale(1.2);
+        }
+
+}
+.svgVisionTwo {
+    left: 8%;
+    transform: translateY(-12vh) scale(1.2);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            left: -2%;
+            transform: translateY(-8vh) scale(1 - 0.3);
+        }
+        @include for-xsmall-desktop-only {
+            left: 1%;
+            transform: translateY(-11vh) scale(1 - 0.2);
+        }
+        @include for-small-desktop-only {
+            left: 5%;
+            transform: translateY(-12vh) scale(1);
+        }
+        @include for-medium-desktop-only {
+            left: 5%;
+            transform: translateY(-12vh) scale(1);
+        }
+}
+.svgVisionThree{
+    right: 47%;
+    transform: translateY(-28vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            right: 44%;
+            transform: translateY(-23vh) scale(1 - 0.4);       
+        }
+        @include for-xsmall-desktop-only {
+            right: 45%;
+            transform: translateY(-33vh) scale(1 - 0.3);
+        }
+        @include for-small-desktop-only {
+            right: 45%;
+            transform: translateY(-31vh);
+        }
+        @include for-medium-desktop-only {
+            right: 45%;
+            transform: translateY(-32vh);  
+        }
+}
+.svgVisionFour {
+    right: 14%;
+    transform: translateY(-4vh);
+            
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            right: -3%;
+            transform: translateY(-10vh) scale(1 - 0.4);
+        }
+        @include for-xsmall-desktop-only {
+            right: 6%;
+            transform: translateY(-10vh) scale(1 - 0.2);
+        }
+        @include for-small-desktop-only {
+            right: 10%;
+            transform: translateY(-12vh);
+        }
+        @include for-medium-desktop-only {
+            right: 9%;
+            transform: translateY(-7vh);
+        }
+        @include for-big-desktop-up {
+            right: 13%;
+            transform: translateY(-8vh) scale(1.2);
+        }
+}
+.svgVisionFive {
+    left: 10%;
+    transform: translateY(87vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            left: 1%;
+            transform: translateY(52vh) scale(1 - 0.4);
+        }
+        @include for-xsmall-desktop-only {
+            left: 4%;
+            transform: translateY(73vh) scale(1 - 0.3);
+        }
+        @include for-small-desktop-only {
+            left: 6%;
+            transform: translateY(83vh) scale(1 - 0.2);
+        }
+        @include for-medium-desktop-only {
+            left: 10%;
+            transform: translateY(100vh) scale(1 - 0.1);
+        }
+        @include for-big-desktop-up {
+            left: 12%;
+            transform: translateY(85vh) scale(1.1);
+        }
+}
+.svgVisionSix {
+    right: 13%;
+    transform: translateY(-16vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            right: 10%;
+            transform: translateY(-16vh) scale(1 - 0.3); 
+        }
+        @include for-xsmall-desktop-only {
+            right: 13%;
+            transform: translateY(-16vh) scale(1 - 0.2);        
+        }
+        @include for-medium-desktop-only {
+            right: 10%;
+            transform: translateY(-16vh);
+        }
+        @include for-big-desktop-up {
+            transform: translateY(-16vh) scale(1.2);
+        }
+}
+.svgVisionSeven {
+    left: 11%;
+    transform: translateY(16vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            left: -2%;
+            transform: translateY(13vh) scale(1 - 0.4);
+        }
+        @include for-xsmall-desktop-only {
+            left: 5%;
+            transform: translateY(22vh) scale(1 - 0.2);
+        }
+        @include for-small-desktop-only {
+            left: 7%;
+            transform: translateY(18vh) scale(1 - 0.1);
+        }
+        @include for-medium-desktop-only {
+            left: 8%;
+            transform: translateY(18vh);
+        }
+        @include for-big-desktop-up {
+            transform: translateY(24vh) scale(1.2)
+        }
+}
+.svgVisionEight {
+    right: 28%;
+    transform: translateY(1vh) rotate(-3deg) scale(1.3);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            right: 13%;
+            transform: translateY(3.5vh) rotate(-2deg) scale(1 - 0.3);
+        }
+        @include for-xsmall-desktop-only {
+            right: 20%;
+            transform: translateY(8vh) rotate(-3deg) scale(1);     
+        }
+        @include for-small-desktop-only {
+            right: 25%;
+            transform: translateY(-1vh) rotate(-3deg) scale(1.1);
+        }
+        @include for-medium-desktop-only {
+            right: 20%;
+            transform: translateY(-1vh) rotate(-3deg) scale(1.1);
+        }
+        @include for-big-desktop-up {
+            right: 28%;
+            transform: translateY(12vh) rotate(-3deg) scale(1.3);
+        }
+}
+.svgVisionNine {
+    right: 20%;
+    transform: translateY(55vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            right: 14%;
+            transform: translateY(32vh) scale(1 - 0.4);
+        }
+        @include for-xsmall-desktop-only {
+            right: 16%;
+            transform: translateY(48vh) scale(1 - 0.1);
+        }
+        @include for-medium-desktop-only {
+            right: 20%;
+            transform: translateY(48vh);
+        }
+        @include for-big-desktop-up {
+            right: 23%;
+            transform: translateY(48vh);
+        }
+}
+.svgVisionTen {
+    left: 20%;
+    transform: translateY(50vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            left: 16%;
+            transform: translateY(32vh) scale(1 - 0.4); 
+        }
+        @include for-xsmall-desktop-only {
+            left: 20%;
+            transform: translateY(46vh) scale(1 - 0.1);        
+        }
+        @include for-medium-desktop-only {
+            transform: translateY(48vh);
+        }
+        @include for-big-desktop-up {
+            transform: translateY(44vh);
+        }
+}
+.svgVisionEleven {
+    transform: translateY(35vh) rotate(11deg);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            display: block;
+            right: 9%;
+            transform: translateY(24vh) rotate(11deg) scale(1 - 0.4); 
+        }
+        @include for-xsmall-desktop-only {
+            right: 12%;
+            transform: translateY(35vh) rotate(11deg) scale(1 - 0.3);        
+        }
+        @include for-big-desktop-up {
+            right: 22%;
+            transform: translateY(33vh) rotate(11deg);
+        }
+}
+.svgVisionTwelve {
+    left: 8%;
+    transform: translateY(-48vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;        
+        }
+        @include for-tablet-landscape-only {
+            left: 4%;
+            transform: translateY(-35vh) scale(1 - 0.4); 
+        }
+        @include for-xsmall-desktop-only {
+            left: 8%;
+            transform: translateY(-44vh) scale(1 - 0.3);        
+        }
+        @include for-big-desktop-up {
+            left: 18%;
+            transform: translateY(-36vh);
+        }
+}
+.svgVisionThirteen {
+    right: 7%;
+    transform: translateY(65vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            right: 3%;
+            transform: translateY(38vh) scale(1 - 0.4);
+        }
+        @include for-xsmall-desktop-only {
+            right: 5%;
+            transform: translateY(53vh) scale(1 - 0.2);
+        }
+        @include for-big-desktop-up {
+            transform: translateY(48vh);
+        }
+}
+.svgVisionFourteen {
+    left: 80%;
+    transform: translateY(30vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            left: 70%;
+            transform: translateY(6vh) scale(1 - 0.4);
+        }
+        @include for-xsmall-desktop-only {
+            left: 80%;
+            transform: translateY(18vh) scale(1 - 0.3);
+        }
+        @include for-small-desktop-only {
+            transform: translateY(20vh);
+        }
+        @include for-big-desktop-up {
+            transform: translateY(20vh);
+        }
+}
+.visionOrangeBrandmark {
+    position: relative;
+    left: 5%;
+    transform: translateY(2vh);
+
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            left: -15%;
+            transform: translateY(-15vh) scale(1 - 0.4);
+        }
+        @include for-xsmall-desktop-only {
+            left: 1%;
+            transform: translateY(-15vh) scale(1 - 0.1);
+        }
+        @include for-small-desktop-only {
+            transform: translateY(-1vh);
+        }
+        @include for-medium-desktop-only {
+            left: 0%;
+            transform: translateY(-4vh) scale(1 - 0.1);
+        }
+        @include for-big-desktop-up {
+            left: 5%;
+            transform: translateY(-10vh);
+        }
+}
+.svgRedBrandmark{
+    display: block;
+    left: 30%;
+    transform: translateY(-9vh);
+        
+        @include for-phone-only {
+            display: none;
+        }
+        @include for-tablet-portrait-only {
+            display: none;
+        }
+        @include for-tablet-landscape-only {
+            display: block;
+            left: 30%;
+            transform: translateY(-12vh) scale(1 - 0.3);
+        }
+        @include for-xsmall-desktop-only {
+            display: block;
+            left: 30%;
+            transform: translateY(-15vh);        
+        }
+        @include for-big-desktop-up {
+            transform: translateY(-20vh);
+        }
+}
+
+//Mobile SVGs
+.svgVisionMobileOne {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            right: 95%;
+            top: 48%;
+            transform: rotate(-30deg) scale(1.5);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            right: 95%;
+            top: 53%;
+            transform: rotate(-30deg) scale(2);
+        }
+}
+.svgVisionMobileTwo  {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            right: -50%;
+            top: 73%;
+            transform: rotate(-8deg);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            left: -68%;
+            top: 75%;
+            transform: rotate(-8deg);
+        }
+}
+.svgVisionMobileThree {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            right: 20%;
+            transform: translateY(180%) scale(1 - 0.09);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            left: 45%;
+            transform: translateY(43vh) scale(1.1);
+        }
+}
+.svgVisionMobileFour {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            left: -9%;
+            transform: translateY(-180%) scale(1 - 0.09);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            left: -6%;
+            transform: translateY(-230%) scale(1.5);
+        }
+}
+.svgVisionMobileFive {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            right: 8%;
+            transform: translateY(29vh);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            right: 15%;
+            transform: translateY(30vh) scale(1.5);
+        }
+}
+.svgVisionMobileSix {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            transform: translateY(46vh) scale(1.1);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            left: 3%;
+            transform: translateY(90vh) scale(1.5);
+        }
+}
+.svgVisionMobileSeven {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            right: -13%;
+            transform: translateY(25vh);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            right: 0%;
+            transform: translateY(40vh) scale(1.5);
+        }
+}
+.svgVisionMobileEight {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            left: 12%;
+            transform: translateY(-320%) scale(1.04);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            left: 11.5%;
+            transform: translateY(-380%) scale(1.5);
+        }
+}
+.svgVisionMobileNine {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            left: 50%;
+            transform: translateY(48vh);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            left: 50%;
+            transform: translateY(50vh) scale(1.5);
+        }
+}
+.svgVisionMobileTen {
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            left: -9%;
+            transform: translateY(770%) scale(1.08);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            left: -9%;
+            transform: translateY(125vh) scale(1.3);
+        }
+}
+.visionOrangeBrandmarkMobile{
+    display: none;
+
+        @include for-phone-only {
+            display: block;
+            transform: translateX(-5%) scale(1 - 0.3);
+        }
+        @include for-tablet-portrait-only {
+            display: block;
+            position: relative;
+            left: 10%;
+            transform: translateY(2vh) scale(1);
+        }
+}

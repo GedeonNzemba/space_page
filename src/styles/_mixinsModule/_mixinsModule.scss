@@ -1,0 +1,225 @@
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexColumnReverse { 
+    display: flex;
+    flex-direction: column-reverse;
+}
+@mixin justifyAndAlignCenter {
+    justify-content: center;
+    align-items: center;
+}
+@mixin justifySBAndAlignCenter {
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin justifyCenterAndAlignBasline {
+    justify-content: center;
+    align-items: baseline;
+}
+@mixin colorBorderBottomBlue {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+}
+@mixin visionImageProperties {
+    overflow: hidden;
+    width: 100%;
+    will-change: transform;
+    --aspect-ratio: 60/75;
+}
+
+// media queries
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-down {
+    @media (max-width: 899px) { 
+        @content; 
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { 
+        @content; 
+    }
+}
+
+@mixin for-tablet-portrait-down {
+    @media (max-width: 899px) { 
+        @content; 
+    }
+}
+
+@mixin for-tablet-portrait-only {
+    @media (min-width: 600px) and (max-width: 899px) { 
+        @content; 
+    }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { 
+        @content; 
+    }
+}
+@mixin for-tablet-landscape-only {
+    @media (min-width: 900px) and (max-width: 1199px) { 
+        @content; 
+    }
+}
+@mixin for-xsmall-desktop-up {
+    @media (min-width: 1200px) {
+        @content; 
+    }
+}
+@mixin for-xsmall-desktop-only {
+    @media (min-width: 1200px) and (max-width: 1365px) {
+        @content;
+    }
+}
+
+
+@mixin for-small-desktop-up {
+    @media (min-width: 1366px) { 
+        @content; 
+    }
+}
+
+
+@mixin for-small-desktop-only {
+    @media (min-width: 1366px) and (max-width: 1535px) {
+        @content; 
+    }
+}
+
+
+@mixin for-medium-desktop-up {
+    @media (min-width: 1536px) { 
+        @content; 
+    }
+}
+@mixin for-medium-desktop-only {
+    @media (min-width: 1536px) and (max-width: 1799px) { 
+        @content; 
+    }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { 
+        @content; 
+    }
+}
+@mixin for-big-desktop-only {
+    @media (min-width: 1800px) and (max-width: 2559px) { 
+        @content; 
+    }
+}
+
+
+// GEDEON
+
+@mixin respond($breakpoint) {
+    // FOR PHONE ONLY
+    @if $breakpoint == for-phone-only {
+        @media (max-width: 37.4375em) { //599px
+            @content;
+        }
+    }
+
+    //  FOR TABLET PORTRAIT DOWN
+    @if $breakpoint == for-tablet-portrait-down {
+        @media (max-width: 56.1875em) { //899px
+            @content;
+        }
+    }
+
+    //  FOR TABLET PORTRAIT UP
+    @if $breakpoint == for-tablet-portrait-up {
+        @media (min-width: 37.5em) { //600px
+            @content;
+        }
+    }
+
+    //  FOR TABLET PORTRAIT ONLY
+    @if $breakpoint == for-tablet-portrait-only {
+        @media (min-width: 37.5em) and (max-width: 56.1875em) { //min-width 600px & max-width 899px
+            @content;
+        }
+    }
+
+    //  FOR TABLET LANDSCAPE UP
+    @if $breakpoint == for-tablet-landscape-up {
+        @media (min-width: 56.25em) { // 900px
+            @content;
+        }
+    }
+
+    //  FOR TABLET LANDSCAPE ONLY
+    @if $breakpoint == for-tablet-landscape-only {
+        @media (min-width: 56.25em) and (max-width: 74.9375em) { // min-width 900px & max-width 1199px
+            @content;
+        }
+    }
+
+    // FOR x-SMALL DESKTOP UP
+    @if $breakpoint == for-xsmall-desktop-up {
+        @media (min-width: 75em) { // 1200px
+            @content; 
+        }
+    }
+
+    // FOR x-SMALL DESKTOP ONLY
+    @if $breakpoint == for-xsmall-desktop-only {
+        @media (min-width: 75em) and (max-width: 85.3125em) { // min-width 1200px & max-width 1365px
+            @content;
+        }
+    }
+    
+    // FOR x-SMALL DESKTOP UP
+    @if $breakpoint == for-small-desktop-up {
+        @media (min-width: 85.375em) {  //1366px
+            @content; 
+        }
+    }
+    
+    // FOR SMALL DESKTOP ONLY
+    @if $breakpoint == for-small-desktop-only {
+        @media (min-width: 85.375em) and (max-width: 95.9375em) { //min width 1366px & max width 1535px
+            @content; 
+        }
+    }
+    
+    // FOR MEDIUM DESKTOP UP
+    @if $breakpoint == for-medium-desktop-up {
+        @media (min-width: 96em) {  //1536px
+            @content; 
+        }
+    }
+
+    //FOR MEDIUM DESKTOP ONLY
+    @if $breakpoint == for-medium-desktop-only {
+        @media (min-width: 96em) and (max-width: 112.4375em) { //min width 1536px & max width 1799px
+            @content; 
+        }
+    }
+
+    //FOR BIG DESKTOP UP
+    @if $breakpoint == for-big-desktop-up {
+        @media (min-width: 112.5em) {  //1800px
+            @content; 
+        }
+    }
+
+    //FOR BIG DESKTOP ONLY
+    @if $breakpoint == for-big-desktop-only {
+        @media (min-width: 112.5em) and (max-width: 159.9375em) {  //min width 1800px & max width 2559px
+            @content;
+        }
+    }
+    
+}

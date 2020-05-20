@@ -1,0 +1,108 @@
+.svgMobileBase {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  z-index: 199;
+  pointer-events: none;
+  stroke: $blue;
+
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+}
+
+.svgMobileHomeOne {
+  right: -1.8%;
+  transform: translateY(60vh);
+
+    @include for-tablet-portrait-only {
+      right: -1%;
+      transform: translateY(58vh) scale(1.2);
+    }
+}
+.svgMobileHomeTwo {
+  left: 0;
+  transform: translateY(98vh);
+
+    @include for-tablet-portrait-only {
+      transform: translateY(100vh) scale(1.2);
+    }
+}
+.svgMobileHomeThree {
+  left: 65%;
+  transform: translateY(-56vh);
+
+    @include for-phone-only {
+      transform: translateY(-53vh);
+    }
+    @include for-tablet-portrait-only {
+      left: 78%;
+      transform: translateY(-44vh) scale(1.2);
+    }
+}
+.svgMobileHomeFour {
+  left: 10%;
+  transform: translateY(-5.5vh);
+
+    @include for-tablet-portrait-only {
+      left: 10%;
+      transform: translateY(22vh) scale(1.2);
+    }
+}
+.svgMobileHomeFive {
+  left: 43%;
+  transform: translateY(-9.5vh);
+
+    @include for-tablet-portrait-only {
+      left: 43%;
+      transform: translateY(-10vh) scale(1.2);
+    }
+}
+.svgMobileHomeSix {
+  left: 63%;
+  transform: translateY(-7.5vh);
+
+    @include for-tablet-portrait-only {
+      left: 68%;
+      transform: translateY(-9vh) scale(1.2);
+    }
+}
+.svgMobileHomeSeven {
+  left: 10%;
+  transform: translateY(-6vh);
+
+    @include for-tablet-portrait-only {
+      left: 11%;
+      transform: translateY(-6vh) scale(1.2);
+    }
+}
+.svgMobileHomeEight {
+  left: 68%;
+  transform: translateY(80vh);
+
+    @include for-tablet-portrait-only {
+      left: 68%;
+      transform: translateY(115vh) scale(1.2);
+    }
+}
+.svgMobileContact {
+  stroke: $light;
+}
+.svgMobileContactOne {
+  left: 0%;
+  transform: translateY(30%);
+
+  @include for-phone-only {
+    transform: translateY(-6vh);
+  }
+  @include for-tablet-portrait-only {
+    transform: translateY(-5vh);
+  }
+}
+.svgMobileContactTwo {
+  right: 10%;
+  transform: translateY(385%);
+  
+  @include for-phone-only {
+    transform: translateY(45vh);
+  }
+}

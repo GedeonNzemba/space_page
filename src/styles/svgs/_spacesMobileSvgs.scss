@@ -1,0 +1,79 @@
+@media only screen and (min-width: $break) {
+  .svgMobileBase {
+    display: none;
+  }
+}
+.svgMobileFortyOne {
+    left: 29%;
+    transform: translateY(-95%);
+  }
+  .svgMobileFortyTwo {
+    left: 4%;
+    transform: translateY(78%);
+
+  }
+  .svgMobileFortyThree {
+    right: 10%;
+    transform: translateY(1100%);
+  }
+  .svgMobileFortyFour {
+    left: 0%;
+    transform: translateY(7850%);
+  }
+  .svgMobileFortyFive {
+    right: -8%;
+    transform: translateY(3450%);
+  }
+
+  .svgMobileFortySix {
+    left: -3%;
+    transform: translateY(2015%);
+  }
+  .svgMobileFortySeven {
+    right: 5%;
+    transform: translateY(-570%);
+  }
+  .svgMobileFortyEight {
+    left: -3%;
+    transform: translateY(-20%);
+  }
+  
+  .svgMobileFortyNine {
+    left: 0;
+    transform: translateY(-90%);
+  }
+
+  @media only screen and (max-height: 40.9375em) {
+    
+      .svgMobileFortyFour {
+        left: 0%;
+        transform: translateY(8100%);
+      }
+      .svgMobileFortyFive {
+        right: -8%;
+        transform: translateY(3520%);
+      }
+      .svgMobileFortySix {
+        left: -3%;
+        transform: translateY(2080%);
+      }
+      .svgMobileFortySeven {
+        right: 5%;
+        transform: translateY(-585%);
+      }
+    
+  }
+  
+  // .svgMobileContact
+  // {
+  //   stroke:$light;
+  // }
+  // .svgMobileContactOne {
+  //   left: 0%;
+  //   transform: translateY(30%);
+  // }
+  
+  // .svgMobileContactTwo {
+  //   right: 10%;
+  //   transform: translateY(385%);
+  // }

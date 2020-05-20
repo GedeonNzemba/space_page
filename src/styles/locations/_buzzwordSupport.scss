@@ -1,0 +1,30 @@
+.locationsBuzzwordsSupportBefore {
+  right: 5%;
+  transform: translateY(1%);
+}
+.locationsBuzzwordsSupportBeforeHide {
+  transform: translateY(1%) rotate3d(0, 1, 0, -90deg);
+}
+.locationsBuzzwordsSupportAfter {
+  right: 5%;
+  transform: translateY(1%) rotate3d(0, 1, 0, 90deg);
+}
+.locationsBuzzwordsSupportAfterShow {
+  transform: translateY(1%) rotate3d(0, 1, 0, 0deg);
+}
+@media only screen and (max-width: $break) {
+  .locationsBuzzwordsSupportBefore {
+    right: unset;
+    transform: unset;
+  }
+  .locationsBuzzwordsSupportBeforeHide {
+    transform:  rotate3d(0, 1, 0, -90deg);
+  }
+  .locationsBuzzwordsSupportAfter {
+    right: unset;
+    transform:  rotate3d(0, 1, 0, 90deg);
+  }
+  .locationsBuzzwordsSupportAfterShow {
+    transform:  rotate3d(0, 1, 0, 0deg);
+  }
+}

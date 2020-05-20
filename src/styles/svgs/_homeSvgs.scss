@@ -1,0 +1,341 @@
+.svgHomeContainer {
+  overflow: hidden;
+  width: 100vw;
+}
+.svgBase {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  z-index: 250;
+  pointer-events: none;
+  stroke: $blue;
+
+  @include for-tablet-portrait-down {
+    display: none;
+  }
+}
+.svgOne {
+  right: 5%;
+  transform: translateY(5vh);
+
+    @include for-tablet-landscape-only {
+      right: 0;
+      transform: translateY(15vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      right: 0;
+      transform: translateY(9vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      right: 0;
+      transform: translateY(9vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      right: 3%;
+      transform: translateY(9vh) scale(1 - 0.2);
+    }
+}
+.svgTwo {
+  left: 11.5%;
+  transform: translateY(76vh) scaleX(-1) rotate(-50deg);
+  
+    @include for-tablet-landscape-only {
+      left: 7%;
+      transform: translateY(74vh) scaleX(-1) rotate(-50deg) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      transform: translateY(72vh) scaleX(-1) rotate(-50deg) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      transform: translateY(72vh) scaleX(-1) rotate(-50deg) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      transform: translateY(72vh) scaleX(-1) scale(1 - 0.2) rotate(-50deg);
+    }
+}
+.svgThree {
+  right: 12%;
+  transform: translateY(-3vh);
+
+    @include for-tablet-landscape-only {
+      transform: translateY(-7vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      transform: translateY(-9vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      transform: translateY(-9vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      transform: translateY(-5vh) scale(1 - 0.2);
+    }
+}
+.svgFour {
+  left: 10%;
+  transform: translateY(88vh);
+
+    @include for-tablet-landscape-only {
+      left: 4%;
+      transform: translateY(75vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      left: 4.5%;
+      transform: translateY(80vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      left: 4.5%;
+      transform: translateY(78vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      left: 7.5%;
+      transform: translateY(91vh) scale(1 - 0.2);
+    }
+}
+.svgFive {
+  left: 7.5%;
+  transform: translateY(57vh);
+
+    @include for-tablet-landscape-only {
+      left: 6.5%;
+      transform: translateY(52vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      transform: translateY(58vh) scale(1 - 0.3);
+    }  
+    @include for-small-desktop-only {
+      transform: translateY(67vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      transform: translateY(57vh) scale(1 - 0.2);
+    }
+    @include for-big-desktop-up {
+      transform: translateY(90vh);
+    }
+}
+.svgSix {
+  right: 8%;
+  transform: translateY(10vh);
+    
+    @include for-tablet-landscape-only {
+      transform: translateY(4vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      transform: translateY(7vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      transform: translateY(7vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      transform: translateY(7vh) scale(1 - 0.2);
+    }
+    @include for-big-desktop-up {
+      transform: translateY(40vh);
+    }
+}
+.svgSeven {
+  right: 5%;
+  transform: translateY(20vh);
+
+    @include for-tablet-landscape-only {
+      right: -2%;
+      transform: translateY(9vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      right: 0%;
+      transform: translateY(7vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      right: 0%;
+      transform: translateY(7vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      right: 2%;
+      transform: translateY(20vh) scale(1 - 0.2);
+    }
+}
+.svgEight {
+  left: 6%;
+  transform: translateY(-25vh);
+
+    @include for-tablet-landscape-only {
+      left: 2%;
+      transform: translateY(-30vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      transform: translateY(-34vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      transform: translateY(-34vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      transform: translateY(-28vh) scale(1 - 0.2);
+    }
+}
+.svgNine {
+  left: 20%;
+  transform: translateY(56vh) scaleX(-1) rotate(-15deg);
+
+    @include for-tablet-landscape-only {
+      transform: translateY(52vh) scaleX(-1) scale(1 - 0.4) rotate(-15deg);
+    }
+    @include for-xsmall-desktop-only {
+      transform: translateY(52vh) scaleX(-1) scale(1 - 0.3) rotate(-15deg);
+    }
+    @include for-small-desktop-only {
+      transform: translateY(52vh) scaleX(-1) scale(1 - 0.3) rotate(-15deg);
+    }
+    @include for-medium-desktop-only {
+      transform: translateY(56vh) scaleX(-1) scale(1 - 0.2) rotate(-15deg);
+    }
+}
+.svgTen {
+  left: 46.6%;
+  transform: translateY(5vh);
+  stroke: $orange;
+
+    @include for-tablet-landscape-only {
+      left: 43.5%;
+      transform: translateY(6vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      left: 45%;
+      transform: translateY(2vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      left: 45.5%;
+      transform: translateY(11vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      left: 45.5%;
+      transform: translateY(4vh) scale(1 - 0.2);
+    }
+}
+.svgEleven {
+  left: 32%;
+  transform: translateY(-19vh);
+
+    @include for-tablet-landscape-only {
+      left: 23%;
+      transform: translateY(-24vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      left: 23%;
+      transform: translateY(-34vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      left: 26%;
+      transform: translateY(-30vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      left: 25%;
+      transform: translateY(-25vh) scale(1 - 0.2);
+    }
+}
+.svgTwelve {
+  right: -5%;
+  transform: translateY(-45vh);
+
+    @include for-tablet-landscape-only {
+      right: -8%;
+      transform: translateY(-55vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      transform: translateY(-53vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      transform: translateY(-53vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      transform: translateY(-49vh) scale(1 - 0.2);
+    }
+}
+.svgThirteen {
+  left: 3.5%;
+  transform: translateY(-8.5vh);
+  
+    @include for-tablet-landscape-only {
+      left: -1%;
+      transform: translateY(-13.5vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      left: 1%;
+      transform: translateY(-13.5vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      left: 1%;
+      transform: translateY(-13.5vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      left: 2.5%;
+      transform: translateY(-10.5vh) scale(1 - 0.2);
+    }
+}
+.svgFourteen {
+  left: 32.5%;
+  transform: translateY(-20.5vh);
+
+    @include for-tablet-landscape-only {
+      left: 22%;
+      transform: translateY(-24vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      left: 26%;
+      transform: translateY(-24vh) scale(1 - 0.3);
+    }
+    @include for-small-desktop-only {
+      left: 26%;
+      transform: translateY(-24vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      left: 30%;
+      transform: translateY(-21vh) scale(1 - 0.2);
+    }
+}
+.svgContact {
+  stroke: $light;
+  z-index: 250;
+}
+.svgContactOne {
+  right: 11%;
+  transform: translateY(80%);
+  
+    @include for-tablet-landscape-only {
+      right: 1%;
+      transform: translateY(34vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      right: 1%;
+      transform: translateY(38vh) scale(1 - 0.4);
+    }
+    @include for-small-desktop-only {
+      right: 3%;
+      transform: translateY(38vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      right: 8%;
+      transform: translateY(34vh);
+    }
+}
+.svgContactTwo {
+  left: 2%;
+  transform: translateY(96%);
+
+    @include for-tablet-landscape-only {
+      left: -6%;
+      transform: translateY(46vh) scale(1 - 0.4);
+    }
+    @include for-xsmall-desktop-only {
+      left: -5%;
+      transform: translateY(46vh) scale(1 - 0.4);
+    }
+    @include for-small-desktop-only {
+      left: -3%;
+      transform: translateY(38vh) scale(1 - 0.3);
+    }
+    @include for-medium-desktop-only {
+      left: 0%;
+      transform: translateY(44vh) scale(1 - 0.2);
+    }
+    @include for-big-desktop-up {
+      transform: translateY(35vh);
+    }
+}

@@ -1,0 +1,152 @@
+.UnitSelectedContainer{
+    border: 1px solid $blue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform .2s linear;
+}
+
+.informationSection{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 58px;
+}
+
+.Heading{
+    margin-bottom: 1rem;
+    font-size: 42px;
+    color: $blue;
+    font-family: "Brown";
+    font-weight: 400;
+    width: 198px;
+    height: 62px;
+    letter-spacing: -1.26px;
+}
+
+.informationSection ul{
+    height:102px;
+    width: 394px;
+    list-style: none;
+}
+
+.informationSection li{
+    list-style: none;
+    color: $blue;
+    font-size: 20px;
+    font-family: "Akkurat";
+    font-weight: 400;
+}
+
+.informationSection p{
+    color: $blue;
+    font-size: 20px;
+    font-family: "Akkurat";
+    font-weight: 400;
+}
+
+.floorPlan{
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+.floorPlan img{
+    height: 100%;
+    padding: 12%;
+    margin-left:8%;
+    padding-right: 6%;
+}
+
+@media (min-width:1000px){
+    .MobileHeading{
+        display: none;
+    }
+    .goBackArrow{
+        // @include arrows();
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .UnitSelectedContainer{
+        flex-direction: column-reverse;
+        border: none;
+        text-align: right;
+    }
+    .Heading{
+        display:none;
+    }
+    .MobileHeading{
+        margin-bottom: 0;
+        font-size: 54px;
+        color: $blue;
+        font-family: "Brown";
+        font-weight: 400;
+        width: 75%;
+        height: 62px;
+        letter-spacing: -1.26px;
+        display: flex;
+
+    }
+    .informationSection{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .informationSection ul{
+        margin: 0;
+        margin-bottom: 5%;
+    }
+    
+    .informationSection li{
+        font-size: 18px;
+    }
+    
+    .informationSection p{
+        font-size: 18px;
+        width: 315px;
+        height:68px
+    }
+    
+    .floorPlan{
+        width: 100%;
+        width:100%;
+        min-width: 287.7px;
+        min-height: 480px;
+        justify-content: center;
+        align-items: center;
+    }
+    .floorPlan img{
+        height: 100%;
+        padding: 0;
+        margin: auto;
+    }
+    .goBackArrow{
+        .backArrow{
+            transform: rotate(180deg);
+            fill: $blue;
+            z-index: 299;
+            margin-right: 3%;
+            cursor: pointer;
+          }
+        background-color: $silver;
+        display: flex;
+        padding: 15px;
+        padding-left: 0;
+        width: 75px;
+        z-index: 300;
+        text-align: center;
+        margin-right: 0;
+        margin-top: -2px;
+        margin-top: -13px;
+        margin-right: 4%;
+      }
+}

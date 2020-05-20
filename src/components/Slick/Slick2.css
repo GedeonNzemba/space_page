@@ -1,0 +1,6 @@
+/* .left-align-slick > .slick-list > .slick-track {    
+    margin-right:0;
+} */
+.slick-list> div {
+    margin-right:0px;
+    }

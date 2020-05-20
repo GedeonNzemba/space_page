@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Brown";
+  src: url("../fonts/brown/Brown-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Akkurat";
+  src: url("../fonts/akkurat/akkurat-mono.woff") format("woff");
+}
+
+h1 h2 h3{
+  font-family:'Brown';
+  line-height:4.25em;
+}
+
+p{
+  font-family: 'Akkurat';
+  font-size: 1.45em;
+}

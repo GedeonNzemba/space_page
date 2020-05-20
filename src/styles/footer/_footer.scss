@@ -1,0 +1,48 @@
+.footerWrapper {
+  @include flexRow;
+}
+.footerPhoneNumber {
+  margin: 5px 5px 5px 10px;
+}
+.footerEmail {
+  margin: 5px;
+}
+.lightFooter {
+  color: $light;
+  background-color: $blue;
+  display: flex;
+  justify-content: space-between;
+  color: $light;
+  border-top: 1px solid $light;
+  width: 100%;
+  padding: 5px 5% 5px 5%;
+  font-family: "Brown";
+  font-size: 12px;
+}
+.footerSocialIconsContainer {
+  @include flexRow;
+  justify-content: space-between;
+}
+.footerContactIconsContainer {
+  @include flexRow;
+}
+
+@media only screen and (max-width: $break) {
+  .footerSocialIconsContainer {
+    display: none;
+    width: 100%;
+  }
+  .lightFooter {
+    @include justifyAndAlignCenter;
+    border-top: 0px solid #fff5e0;
+    text-align: center;
+    padding: 1%;
+    
+  }
+  .footerContactIconsContainer{
+    @include flexColumn;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

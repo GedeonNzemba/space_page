@@ -1,0 +1,41 @@
+.dark {
+  background-position: right bottom;
+  color: $light;
+}
+.topInfo {
+  color: $light;
+  border-bottom: 2px solid $light !important;
+}
+.bottomInfo {
+  color: $light !important;
+  border-top: 2px solid $light !important;
+}
+
+.testLine {
+  stroke: $light;
+  transition: stroke $colourChangeDuration ease-in-out;
+}
+.cursor {
+  // transition:all ease-in-out 1s;
+  stroke: $light;
+  mix-blend-mode: screen;
+}
+
+.dark {
+  background-color: $dark !important; //background colour after change
+  stroke: $light; //line colour after change
+}
+
+// gedeon
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(3rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+

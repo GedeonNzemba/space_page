@@ -1,0 +1,216 @@
+.personalDetailsForm {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    align-items: flex-start;
+    width: 90%;
+}
+
+.field {
+    position: relative;
+    margin: 0;
+    margin-right: 46px;
+    margin-bottom: 56px;
+}
+
+.field input {
+    font-size: 18px;
+    padding: 10px;
+    width: 274px;
+    font: 400 17px "Akkurat";
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $green;
+    padding-left: 0;
+    padding-bottom: 15px;
+    padding-top: 9px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.field label {
+    font: 400 17px "Brown";
+    color: $green;
+    position: absolute;
+    left: 0;
+    top: 13px;
+    pointer-events: none;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label,
+form:focus ~ label {
+    top: -18px;
+    font: 400 14px "Brown";
+    opacity: 0.59;
+}
+
+.tenantHeading {
+    height: 58px;
+    margin-top: 39px;
+    font: 400 42px "Brown";
+    letter-spacing: -1.26px;
+    color: $green;
+    margin-bottom: 0;
+}
+
+@mixin leaseHeadings {
+    margin: 0;
+    margin-top: 28px;
+    margin-bottom: 39px;
+    height: 30px;
+    font: 400 24px "Brown";
+    color: $green;
+    letter-spacing: -0.72px;
+}
+
+.personalDetailsHeading {
+    @include leaseHeadings;
+}
+
+.questionHeading {
+    @include leaseHeadings;
+    margin-top: 1px;
+    margin-bottom: 36px;
+}
+
+.radioQuestionSection_LeasePeriod {
+    margin-left: 0;
+    width: 274px;
+    margin-bottom: 65px;
+}
+.radioQuestionSection {
+    margin-left: 46px;
+    width: 274px;
+}
+.radioQuestionSection_whoLeasing {
+    margin-left: 0;
+    margin-top: 63px;
+}
+
+.yesnoRadioContainer {
+    display: flex;
+}
+
+.ifApplicable {
+    margin-top: -41px;
+    font: 400 12px "Akkurat";
+    letter-spacing: -0.36px;
+    color: $green;
+    opacity: 0.53;
+    width: 100%;
+}
+
+.submitBookingApplication {
+    font: 400 17px "Akkurat";
+    color: $light;
+    background-color: $green;
+    transition: all 0.3s linear;
+    border: none;
+    width: 352px;
+    height: 56px;
+    cursor: pointer;
+    outline: none;
+}
+
+.submitBookingApplication:hover {
+    transition: all 0.3s linear;
+    background-color: $orange;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.inputSection{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputInvalid{
+    font: 400 12px "Akkurat";
+    color: rgb(185, 48, 30);
+    // margin: 0;
+    margin-top: -48px;
+    padding:0;
+    margin-bottom: 30.5px;
+
+}
+
+.checkBoxContainer {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font: 400 17px "Brown";
+    padding-top:4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.2s linear;
+  }
+  
+
+  .checkBoxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    transition: all 0.2s linear;
+  }
+  
+
+  .checkmarkAgreement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $light;
+    border: 1.5px solid $green;
+    transition: all 0.2s linear;
+  }
+  
+
+  .checkBoxContainer input:checked ~ .checkmarkAgreement {
+    background-color: $green;
+    transition: all 0.2s linear;
+  }
+  
+ 
+  .checkmarkAgreement:after {
+    content: "";
+    position: absolute;
+    display: none;
+    transition: all 0.2s linear;
+  }
+  
+  
+  .checkBoxContainer input:checked ~ .checkmarkAgreement:after {
+    display: block;
+    transition: all 0.2s linear;
+  }
+  
+ 
+  .checkBoxContainer .checkmarkAgreement:after {
+    left: 5.9px;
+    top: 2.5px;
+    width: 5px;
+    height: 10px;
+    border: solid $light;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all 0.2s linear;
+  }

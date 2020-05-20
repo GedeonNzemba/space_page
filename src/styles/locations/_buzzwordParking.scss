@@ -1,0 +1,31 @@
+  .locationsBuzzwordsParkingBefore {
+    left: 45%;
+    transform: translateY(40%);
+  }
+  .locationsBuzzwordsParkingBeforeHide{
+    transform: translateY(40%) rotate3d(0,1,0,-90deg);
+  }
+  .locationsBuzzwordsParkingAfter {
+    left: 45%;
+    transform: translateY(40%) rotate3d(0,1,0,90deg);
+  }
+  .locationsBuzzwordsParkingAfterShow{
+    transform: translateY(40%) rotate3d(0,1,0,0deg);
+  }
+
+  @media only screen and (max-width: $break) {
+    .locationsBuzzwordsParkingBefore {
+      left:unset;
+      transform: unset;
+    }
+    .locationsBuzzwordsParkingBeforeHide{
+      transform:  rotate3d(0,1,0,-90deg);
+    }
+    .locationsBuzzwordsParkingAfter {
+      left:unset;
+      transform:  rotate3d(0,1,0,90deg);
+    }
+    .locationsBuzzwordsParkingAfterShow{
+      transform:  rotate3d(0,1,0,0deg);
+    }
+  }

@@ -1,0 +1,80 @@
+.locationsSvgOne {
+  position: absolute;
+  width: 50%;
+  transform: translateY(120%) translateX(30%);
+}
+.locationsSvgTwo {
+  position: absolute;
+  right: 0%;
+  width: 50%;
+  transform: translate(-10%, -20%);
+}
+.locationsSvgThree {
+  position: absolute;
+  // right:0%;
+  left: 0%;
+  width: 20%;
+  transform: translate(0, 75%);
+}
+.locationsSvgFour {
+  position: absolute;
+  // right:0%;
+  // left:0%;
+  width: 100%;
+  transform: translate(0, 300%);
+}
+.locationsSvgFive {
+  position: absolute;
+  right: 0%;
+  // left:0%;
+  width: 30%;
+  transform: translate(-10%, 320%);
+}
+.locationsSvgSix {
+  position: absolute;
+  // right:0%;
+  left: 0%;
+  width: 30%;
+  // transform: translate(-10%,320%);
+}
+.locationsSvgSeven {
+  position: absolute;
+  right: 0%;
+  // left:0%;
+  width: 30%;
+  transform: translate(0%, 40%);
+}
+.locationsSvgEight {
+  position: absolute;
+  // right:0%;
+  left: 0%;
+  width: 30%;
+  // transform: translate(0%,40%);
+}
+.locationsSvgNine {
+  position: absolute;
+  right: 0%;
+  // left:0%;
+  width: 30%;
+  transform: translate(-25%, 300%);
+}
+.locationsSvgTen {
+  position: absolute;
+  // right:0%;
+  left: 0%;
+  width: 50%;
+  transform: translate(10%, 150%);
+}
+.locationsSvgEleven {
+  position: absolute;
+  right: 0%;
+  // left:0%;
+  width: 50%;
+  transform: translate(10%, 210%);
+}
+.locationsSvgs {
+  display: unset;
+  z-index: 15;
+  stroke: $blue;
+  pointer-events: none;
+}

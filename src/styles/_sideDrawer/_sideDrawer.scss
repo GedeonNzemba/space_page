@@ -1,0 +1,42 @@
+.SideDrawer {
+  @include flexColumn;
+  position: fixed;
+  width: 330px;
+  max-width: 90%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background-color: $green;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+  justify-content: space-between;
+}
+
+.SideDrawerNavContainer {
+  display: flex;
+  position: relative;
+  padding-top: 50%;
+  padding-left: 5%;
+}
+
+.SideDrawerSocialsContainer{
+    @include flexRow;
+    border-top: 1px solid $light;
+    margin: 10% ;
+    color: $light;
+}
+
+@media (min-width: $break) {
+  .SideDrawer {
+    display: none;
+  }
+}
+
+.Open {
+  transform: translateX(0);
+}
+
+.Close {
+  transform: translateX(-100%);
+}

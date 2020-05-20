@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+.carousel-cell {
+  width: 100%;
+margin: 0;
+padding: 0;
+overflow: hidden;
+transition: all .5s;
+}
+
+.carousel-cell img {
+display: block;
+width: 100%;
+height: 512px!important;
+} 
+.flickity-viewport {
+  height: 100%;
+}
+.carousel-cell:not(.is-selected) {
+  transform: scale(.8);
+  border-radius: 10%;
+    z-index: -1;
+    height: 512px!important;
+    
+}
+#btn{
+  position: relative;
+  cursor: pointer;
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; 
+  transition: all .2;
+}
+#btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(#000, .2);
+
+  
+  box-shadow: 0 1rem 2rem rgba(rgb(229, 232, 232), 0.15);
+  transform: translateY(-2px);
+}
+#btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+#btn:active,
+#btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 .5rem 1rem rgba(#000,.2);
+}
+#btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(3rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .carousel-cell img {
+    display: block;
+    width: 100%;
+    height: 50%!important;
+}
+#button_1{
+  bottom: 2rem;
+  left: 15%;
+}
+}
+
+/* .carousel {
+    width: 100%;
+    height: 100%;
+}
+.carousel > * {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+.carousel .carousel-cell:nth-child(odd) {
+  background-color: red;
+}
+.flickity-viewport {
+  height: 100%!important;
+}
+.carousel .carousel-cell:nth-child(even) {
+  background-color: green;
+}
+
+.carousel-cell {
+  width: 100%; 
+  line-height: 100%;
+  margin-right: 0px;
+  transition: transform 0.3s linear;
+  border: 2px solid olive;
+
+}
+
+.carousel-cell img {
+    width: 100%;
+}
+
+.carousel-cell:not(.is-selected) {
+    transform: scale(0.9);
+    border-radius: 10%;
+    z-index: -1;
+} */

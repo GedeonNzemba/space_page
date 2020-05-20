@@ -1,0 +1,125 @@
+.contactFormContainer {
+  background-color: $blue;
+  width: 100vw;
+  min-height: 100%;
+}
+
+.contactForm {
+  @include bodyCopy();
+  @include flexColumn;
+  color: $light;
+}
+
+.contactFormHeader {
+  @include justifyAndAlignCenter;
+  font-family: "Akkurat";
+  display: flex;
+  text-align: center;
+  background-color: $blue;
+  color: $light;
+  max-width: 250px;
+  padding: 15px;
+  padding-bottom: 0px;
+}
+
+.contactFormContainer {
+  @include flexRow;
+  font-family: "Akkurat";
+}
+
+.contactFormWrapper {
+  @include flexColumn;
+  overflow: hidden;
+  padding: 0 1%;
+  margin: 0 -1%;
+}
+
+.contactFormHeading {
+  color: white;
+  font-family: "Brown";
+  padding: 10px;
+}
+
+.contactFormInputWrapper {
+  @include flexRow;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@mixin inputType {
+  border: none;
+  border-bottom: 0.5px solid $light;
+  background-color: $blue;
+  color: $light;
+  padding: 5px;
+  width: 100%;
+}
+
+.firstName {
+  @include inputType();
+  font-size: 18px;
+}
+
+.lastName {
+  @include inputType();
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.email {
+  @include inputType();
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.message {
+  @include inputType();
+  margin-top: 30px;
+  resize: none;
+  font-size: 18px;
+}
+
+.formButton {
+  background-color: $light;
+  color: $blue;
+  max-width: 150px;
+  padding: 5px;
+  margin-top: 30px;
+}
+// .contactFormMap {
+//   width: 500px;
+//   height: 400px;
+//   background-color: gray;
+// }
+.contactFormMapDiv {
+  width: 50%;
+  padding: 5%;
+}
+.contactFormInternalContainer {
+  width: 50%;
+  padding: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+@media only screen and (max-width: $break) {
+  .contactFormHeader{
+    display:none;
+  }
+  .contactFormMap {
+    display: none;
+  }
+  .contactFormMapDiv {
+    padding: 0;
+    margin: 0;
+  }
+  .contactFormContainer {
+    @include flexColumn;
+    align-items: center;
+  }
+  .contactFormInternalContainer {
+    width: 90%;
+    padding: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}

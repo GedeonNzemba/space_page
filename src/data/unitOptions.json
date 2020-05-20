@@ -1,0 +1,54 @@
+{
+  "unitOptions": {
+    "studio": {
+      "copy": {
+        "unitType": "Studio",
+        "unitDesc": "Studio apartments are for those of us who enjoy a bit of “me time”.",
+        "unitCta": "More About Studio Options"
+      },
+      "overlay": {
+        "src": ""
+      }
+    },
+    "studioPlus": {
+        "copy": {
+          "unitType": "Studio+",
+          "unitDesc": "Studio+ apartments are bigger and just as private, we recommend them if space is properly important to you.",
+          "unitCta": "More About Studio+ Options"
+        },
+        "overlay": {
+          "src": ""
+        }
+      },
+      "twoBedroom": {
+        "copy": {
+          "unitType": "Two Bedroom",
+          "unitDesc": "Two Bedroom apartments fit those who value company. We love a duo.",
+          "unitCta": "More About Two Bedroom Options"
+        },
+        "overlay": {
+          "src": ""
+        }
+      },
+      "threeBedroom": {
+        "copy": {
+          "unitType": "Three Bedroom",
+          "unitDesc": "Three Bedroom apartments are a proper good time. They’re spacious too.",
+          "unitCta": "More About Three Bedroom Options"
+        },
+        "overlay": {
+          "src": ""
+        }
+      },
+      "fourBedroom": {
+        "copy": {
+          "unitType": "Four Bedroom",
+          "unitDesc": "Four Bedroom apartments are our largest option. You’ll never be lonely in one of these.",
+          "unitCta": "More About Four Bedroom Options"
+        },
+        "overlay": {
+          "src": ""
+        }
+      }
+  }
+}

@@ -1,0 +1,30 @@
+.locationsBuzzwordsCoffeeShopsBefore {
+  right: 15%;
+  transform: translateY(120%);
+}
+.locationsBuzzwordsCoffeeShopsBeforeHide {
+  transform: translateY(120%) rotate3d(0, 1, 0, -90deg);
+}
+.locationsBuzzwordsCoffeeShopsAfter {
+  right: 15%;
+  transform: translateY(120%) rotate3d(0, 1, 0, 90deg);
+}
+.locationsBuzzwordsCoffeeShopsAfterShow {
+  transform: translateY(120%) rotate3d(0, 1, 0, 0deg);
+}
+@media only screen and (max-width: $break) {
+  .locationsBuzzwordsCoffeeShopsBefore {
+    right: unset;
+    transform:unset;
+  }
+  .locationsBuzzwordsCoffeeShopsBeforeHide {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
+  .locationsBuzzwordsCoffeeShopsAfter {
+    right: unset;
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  .locationsBuzzwordsCoffeeShopsAfterShow {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}

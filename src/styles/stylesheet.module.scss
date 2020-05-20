@@ -1,0 +1,160 @@
+@import "./constants.module";
+@import "./text/text";
+@import "./_mixinsModule/mixinsModule";
+
+@import "./_toggle/toggle.module";
+@import "_lines/lines";
+@import "_scrollbar/scrollbar";
+@import "_containers/containers";
+@import "./_animations/darkMode";
+@import "./_fonts/fonts";
+@import "./_contact/contact";
+@import "./_navbar/navbar";
+@import "./_navigationItems/navigationItems";
+@import "./_cta/cta";
+@import "./_backdrop/backdrop";
+@import "./_bookingModal/bookingModal";
+@import "./_sideDrawer/sideDrawer";
+@import "./_drawerToggle/drawerToggle";
+@import "./_toolbar/toolbar";
+@import "./_basicSection/basicSection";
+@import "./instagramSection/instagramSection";
+@import "./_unitOption/unitOption";
+@import "./_drawerToggle/drawerToggle";
+@import "./_sideDrawer/sideDrawer";
+@import "./_backdrop/backdrop";
+@import "./footer/footer";
+@import "./header/header";
+@import "./svgs/homeSvgs";
+@import "./svgs/homeMobileSvgs";
+@import "./svgs/spacesSvgs";
+@import "./svgs/spacesMobileSvgs";
+@import "./svgs/visionSvgs";
+@import "./_innerImageAnimation/innerImageAnimation";
+@import "./modal/modal";
+@import "./_founderSlider/founderSlider";
+@import "./_appFeatures/appFeatures";
+@import "./_unit/unit";
+@import "./_unitSelected/unitSelected";
+@import "./_calendar/calendar";
+@import "./_leaseApplicationModal/_leaseApplicationModal";
+@import "./_leaseApplicationForm/leaseApplicationForm";
+@import "./_overlay/overlay";
+//pages
+@import "./home/home";
+@import "./_vision/vision";
+@import "./_spaces/spaces";
+@import "./_RoomSelector/RoomSelector";
+@import "./locations/locations";
+@import "./comingSoon/comingSoon";
+@import "./_404/404";
+@import "./_payment/payment";
+
+
+
+html {
+  // gedeon
+  @include respond(for-xsmall-desktop-only) {
+    font-size: calc(16.5px + (17 - 16.5)*(100vw - 1200px) / (1365 - 1200))!important;
+  }
+
+  @media (min-width: 62.0625em) and (max-width: 74.9375em) {
+    font-size: calc(13.8px + (16.5 - 13.8)*(100vw - 993px) / (1199 - 993))!important;  
+  }
+
+  @include respond(for-tablet-portrait-only) {
+    font-size: calc(16px + (19 - 16)*(100vw - 600px) / (899 - 600))!important;
+  }
+
+  @media (max-width: 21.875em) {
+    font-size: 90%!important;
+  }
+  @media (max-width: 18.6875em) {
+    font-size: 80%!important;
+  }
+}
+
+
+
+.gatsby-image-outer-wrapper, 
+.gatsby-image-wrapper {
+  height: 100%!important; 
+}
+
+
+
+
+
+html a {
+  text-decoration: none;
+}
+
+body {
+  // overflow: hidden:
+  background-color: $silver;
+}
+
+.viewport {
+  margin: 0 0 0 0;
+  width: 100vw;
+  overflow-x: hidden;
+  position: fixed;
+}
+
+.comingSoon {
+  @include bodyCopy();
+}
+
+.year {
+  @include bodyCopy();
+}
+
+.properLiving {
+  @include bodyCopy();
+}
+
+.studentAccommodation {
+  @include bodyCopy();
+}
+
+.imageColumn {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.textColumn {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+}
+
+@media only screen and (max-width: $break) {
+  .properLiving {
+    font-size: 16px;
+  }
+
+  .year {
+    font-size: 16px;
+  }
+
+  .studentAccommodation {
+    color: $silver;
+  }
+
+  .comingSoon {
+    color: $silver;
+  }
+
+  .imageColumn {
+    display: none;
+  }
+
+  .textColumn {
+    width: 100%;
+    padding-left: 0%;
+  }
+}

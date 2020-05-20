@@ -1,0 +1,334 @@
+.founderSliderCompleteCont {  
+  width: 100%;
+  
+    @include for-medium-desktop-only {
+      margin-bottom: 5%;
+    }
+}
+.founderSliderContainer {
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+    @include for-big-desktop-up {
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+    @include for-small-desktop-only {
+      margin-bottom: 8%;
+    }
+}
+.founderSliderHeading {
+  @include heading;
+  width: 50%;
+  padding: 5% 6% 0 12%;
+
+    @include for-phone-only {
+      width: 100%;
+      padding: 0 6% 5% 5%;
+      margin: 25% 0 0 0;
+      font-size: 32px;
+    }
+    @include for-tablet-portrait-only {
+      width: 100%;
+      max-width: 600px;
+      padding: 0 6% 0 5%;
+      margin: 25% 0 0 0;
+      font-size: $sub-heading-copy;
+    }
+    @include for-tablet-landscape-only {
+      width: 55%;
+      font-size: $xlarge-body-copy;
+    }
+    @include for-xsmall-desktop-up {
+      font-size: $sub-heading-copy;
+      width: 55%;
+    }
+    @include for-medium-desktop-up {
+      font-size: $main-heading-copy;
+      width: 55%;
+    }
+}
+.founderSliderContent {
+  @include flexRow;
+  padding: 0 7%;
+  margin: 5% 0 6%;
+
+    @include for-big-desktop-up {
+      max-width: 1900px;
+    }
+}
+.founderSliderImageContainer {
+  @include flexRow;
+  box-sizing: border-box;
+  max-width: 432px;
+  max-height: 568px;
+  overflow-x: hidden;
+  position: relative;
+  margin-right: 25px;
+
+    @include for-tablet-landscape-only {
+      min-width: 200px;
+      max-height: 310px;
+    }
+		@include for-xsmall-desktop-only {
+			min-width: 270px;
+      max-height: 400px;    
+		}
+    @include for-small-desktop-only {
+			min-width: 332px;
+      max-height: 468px;    
+    }
+    @include for-medium-desktop-up {
+      min-width: 432px;
+      max-height: 568px;
+    }
+}
+.founderSliderImageSubContainer {
+  width: 100%;
+  padding-right: 2%;
+  z-index: 20;
+  transition: all 1.2s ease-in-out;
+}
+.founderTwoSliderImageSubContainer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  // padding-right: 2%;
+  // opacity: 0;
+  // transition: transform linear 1s;
+}
+.changeFounder {
+  width: 0;
+  // opacity: 1;
+  // transform: translateX(-100%);
+}
+.founderSliderCopyColumn {
+  @include flexColumn;
+  justify-content: center;
+  padding: 0 5% 0 1%;
+  margin-top: 1.5%;
+  width: 100%;
+
+    @include for-tablet-landscape-only {
+      padding: 0 1% 0 1%;
+      margin-top: 0.5%;
+    }
+    @include for-xsmall-desktop-only {
+      margin-top: 1%;
+    }
+}
+.founderSliderCopyContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.showCopy {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity ease-in 0.6s;
+}
+.hideCopy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity ease-out 0.6s;
+}
+.founderName {
+  @include colorBorderBottomBlue;
+  position: relative;
+  min-height: 30px ;
+  font-family: "Brown";
+  font-size: $large-body-copy;
+  font-weight: 600;
+  padding-bottom: 5.5%;
+
+  @include for-tablet-landscape-only {
+    font-size: $base-font-size;
+    padding-bottom: 6%;
+  }
+  @include for-medium-desktop-only {
+    padding-bottom: 6%;;
+  }
+}
+.founderPullQuoteContainer {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  padding: 0 3% 0 3%;
+  margin: 5% 0 5% 0;
+  z-index: 30;
+
+    @include for-tablet-landscape-only {
+      margin: 3% 0 3% 0;
+      height: 30px;
+    }
+    @include for-xsmall-desktop-only {
+      margin: 3% 0 3% 0; 
+      height: 45px;
+    }
+    @include for-small-desktop-only {
+      margin: 3% 0 3% 0;
+    }
+    @include for-medium-desktop-only {
+      margin: 4% 0 4% 0;
+      height: 50px;
+    }
+}
+.founderPullQuote {
+  @include brownFourHundred;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  left: -85px;
+  color: $green;
+  font-size: $main-heading-copy;
+  line-height: 1.4;
+
+    @include for-tablet-landscape-only {
+      font-size: $large-body-copy;
+      left: -52px;
+    }
+    @include for-xsmall-desktop-only {
+      font-size: $xlarge-body-copy;
+      left: -64px;
+    }
+    @include for-small-desktop-only {
+      font-size: $sub-heading-copy;
+      left: -72px;
+    }
+    @include for-medium-desktop-only {
+      font-size: $sub-heading-copy;
+    }
+}
+.founderPullQuoteText{
+  padding-top: 0.5%;
+}
+.quoteNotTransform{
+  @include flexColumn;
+  position: absolute;
+  top:-100px;
+  height: 100px;
+  transition: transform 1.2s ease-in-out;
+
+    @include for-tablet-landscape-only {
+      top: -44px;
+    }
+    @include for-xsmall-desktop-only {
+      top: -65px;
+    }
+    @include for-small-desktop-only {
+      top: -75px;
+    }
+    @include for-medium-desktop-only {
+      top: -78px;
+    }
+}
+.founderPullQuoteTextTransform{
+  transform: translateY(75px);
+    
+    @include for-tablet-landscape-only {
+      transform: translateY(39px);
+    }    
+    @include for-xsmall-desktop-only {
+      transform: translateY(55px);
+    }
+    @include for-small-desktop-only {
+      transform: translateY(65px);
+    }
+    @include for-medium-desktop-only {
+      transform: translateY(64px);
+    }
+}
+.founderPullQuoteTextReverse{
+  flex-direction: column-reverse;
+}
+.founderDesc {
+  @include bodyCopy;
+  position: relative;
+  width: 100%;
+  height: 250px;
+
+    @include for-tablet-landscape-only {
+      font-size: 12px;
+    }
+    @include for-xsmall-desktop-only {
+      font-size: $xsmall-body-copy;
+    }
+    @include for-small-desktop-only {
+      font-size: $base-font-size;
+    }
+    @include for-medium-desktop-only {
+      font-size: 18px;
+    }    
+}
+.founderCtaContainer {
+  @include flexRow;
+  @include justifySBAndAlignCenter;
+  margin-top: 7%;
+  width: 22%;
+
+    @include for-tablet-landscape-only {
+      margin-top: -8%;
+      width: 30%;
+      max-width: 150px;
+    }	
+    @include for-xsmall-desktop-only {
+      margin-top: 5%;
+      width: 30%;
+      max-width: 200px;
+    }
+    @include for-small-desktop-only {
+      width: 28%;
+      max-width: 200px;
+    }
+    @include for-medium-desktop-only {
+      margin-top: 129px;
+      width: 28%;
+    }
+    @include for-big-desktop-up {
+      margin-top: 90px;
+    }
+}
+.founderCtaTextContainer{
+  @include justifyAndAlignCenter;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+.nextFounder {
+  @include flexRow;
+  @include justifySBAndAlignCenter;
+  color: $blue;
+  font-family: "Brown";
+  font-size: $body-copy;
+  font-weight: 600;
+  width: 100%;  
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+    @include for-tablet-landscape-only {
+      font-size: 12px;
+    }
+    @include for-xsmall-desktop-only {
+      font-size: $base-font-size;
+    }
+    @include for-small-desktop-only {
+      font-size: $base-font-size;
+    }
+}
+.nextFounder:hover {
+    transform: scale(1.1);
+}

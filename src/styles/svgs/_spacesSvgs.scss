@@ -1,0 +1,75 @@
+
+  @media only screen and (max-width: $break) {
+    .svgBase {
+      display: none;
+    }
+  }
+  .svgFortyOne {
+    left: 30%;
+    transform: translateY(-220%);
+    fill:none;
+    stroke-miterlimit:10;
+  }
+
+  .svgFortyTwo {
+    transform: translateY(-90%);
+    left: 5%
+  }
+
+  .svgFortyThree {
+    right: -1%;
+}
+
+.svgFortyFour {
+    transform: translateY(2200%);
+}
+
+.svgFortyFive {
+    transform: translateY(250%);
+    right: 10%;
+}
+
+.svgFortySix {
+    transform: translateY(730%) rotate(-17deg);
+    left: 40%;
+}
+
+.svgFortySeven {
+    transform: translateY(1230%) rotate(145deg);
+    right: 8%;
+}
+.svgFortyEight{
+    left: 40%;
+    transform: translateY(-200%);
+}
+
+  @media (max-width: 1400px){
+    .svgFortyFour {
+        transform: translateY(1900%);
+    }
+    
+    .svgFortyFive {
+        transform: translateY(210%);
+        right: 10%;
+    }
+    
+    .svgFortySix {
+        transform: translateY(560%) rotate(-17deg);
+        left: 20%;
+    }
+    
+    .svgFortySeven {
+        transform: translateY(995%) rotate(145deg);
+        right: 8%;
+    }
+    .svgFortyEight{
+        left: 30%;
+    }
+  }
+  
+  
+  
+
+
+      
+  

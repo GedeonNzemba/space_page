@@ -1,0 +1,207 @@
+
+.locationsUnitOptionSubContainer {
+  width: 90% !important;
+  overflow: scroll;
+  position: relative !important;
+  left: unset !important;
+  transform: translateX(5%);
+}
+@import "./locationsHero";
+
+.locationsAdvancedSectionImage {
+  transform: translateY(-5%);
+  z-index: 10;
+}
+.lightNav {
+  color: $blue !important;
+  border-bottom: 0px solid $blue;
+}
+.lightNav:hover {
+  border-bottom: 2px solid $blue !important;
+}
+.activeLocationsLink {
+  border-bottom: 2px solid $blue;
+}
+.locationsBrandmark {
+  width: 8vw;
+}
+.locationsBrandmarkWithText {
+  position: absolute !important;
+  width: 10vw;
+  right: 15%;
+  transform: translateY(50%);
+}
+.locationsBrandmarkDiv {
+  transform: translate(-140%, 75%);
+  justify-self: right;
+  width: 12vw;
+}
+.locationsBrandmarkText {
+  position: absolute;
+  top: 95vh;
+  right: 3%;
+  font-size: 1rem;
+  color: $blue;
+}
+.locationsBasicSectionLeftContainer{
+    @include flexRow;
+    color: $blue;
+    height: 80vh;
+    width: 100%;
+}
+
+
+@import "./locationsSvgs";
+
+.locationsSpacesSectionParagraph {
+  width: 40%;
+}
+.locationsSpacesTextColumn {
+  color: $blue;
+  height: 40vh !important;
+  padding-bottom: 0em !important;
+  width: 100%;
+  height: 50%;
+  padding: 5%;
+  padding-right: 1%;
+  margin-bottom: 150px;
+}
+.locationsUnitOptionContainer {
+  display: flex;
+  justify-content: center;
+}
+.locationsUnitOption {
+  min-width: 250px;
+  height: unset;
+}
+.locationsUnitOptionContent {
+  padding: 8%;
+}
+.locationsUnitHoverOverlay {
+  opacity: 0;
+}
+.locationsMobileUnitOptionImageContainer {
+  display: flex;
+}
+.locationsUnitOptionType {
+  width: 75%;
+  border-bottom: 1px solid $blue;
+  font-family: "Brown";
+  font-size: 14px;
+  padding: 5px 0 5px 0;
+  border: none;
+  border-top: 1px solid $blue;
+  font-size: 20px;
+  width: 100%;
+}
+.locationsUnitOptionDesc {
+  display: none;
+}
+.locationsUnitOptionCta {
+  display: none;
+}
+@import "./locationsMap";
+
+
+.locationsTestimonialContainer{
+  @include justifyAndAlignCenter;
+  display: flex;
+  text-align: center;
+  height: 20vh;
+  width: 100%;
+  margin-bottom: 10vh;
+  }
+  
+.locationsTestimonialCopy{
+  width: 50%;
+  font-family: "akkurat";
+  color: $green;
+  font-size: 24px;
+}
+
+@import "./locationsAdvancedSections";
+
+@import "./locationsBuzzwords";
+
+
+
+
+
+
+
+
+//media
+
+@media only screen and (max-width: $break) {
+  
+  .locationsBrandmarkDiv {
+    position: absolute;
+    right: 4%;
+    transform: translateY(90vh);
+    width: 125px;
+  }
+  .locationsBrandmark {
+    width: 100%;
+  }
+  .locationsBrandmarkText {
+    display: none;
+  }
+  
+  .locationsSpacesTextColumn {
+    padding-bottom: 0em !important;
+    width: 100%;
+    height: 50%;
+    padding: 5%;
+    padding-right: 1%;
+    margin-bottom: 150px;
+  }
+  .locationsSpacesSectionParagraph {
+    width: 100%;
+  }
+  .locationsSpacesTextColumn {
+    margin-bottom: 10px;
+  }
+  .locationsTestimonialContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 20vh;
+    width: 100%;
+    margin-bottom: 1vh;
+  }
+  .locationsTestimonialCopy {
+    width: 100%;
+    font-family: "akkurat";
+    color: $green;
+    font-size: 14pt;//17pt
+    margin-left:5%;
+    margin-right:5%;
+
+  }
+  .locationsBrandmarkWithText{
+    display:none;
+  }
+.locationsBasicSectionLeftContainer{
+    height: auto;
+    flex-direction: column;
+    margin-top: 0;
+}
+.locationsBasicSectionRightContainer{
+  height: auto;
+  flex-direction: column;
+  margin-top: 0;
+}
+  
+  
+  .locationsSvgs {
+    display: none;
+  }
+  .locationBuzzwordCards {
+    background-color: $green;
+    color: $light;
+    left: unset;
+    right: unset;
+    width: 90vw;
+  }
+}

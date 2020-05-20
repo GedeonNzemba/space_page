@@ -1,0 +1,41 @@
+.locationsMap {
+  width: 40%;
+  margin: 3rem;
+}
+.locationsMapDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: $break) {
+  .locationsMapDiv {
+    width: 100%;
+    padding: 5%;
+    margin: 0 !important;
+    text-align: left;
+  }
+  .locationsMap {
+    width: 100%;
+  }
+  .locationsMapDiv p {
+    color: $blue;
+    text-align: left !important;
+    font-family: "Akkurat";
+    font-size: 13pt !important;
+    margin-bottom: 0.5rem;
+  }
+  .locationsMapDiv h1 {
+    color: $blue;
+    text-align: left !important;
+    font-family: "Brown";
+    font-size: 24pt;
+    font-weight: unset;
+  }
+}
+@media only screen and (max-width: $midBreak) {
+  .locationsMapDiv {
+    margin-bottom: 4rem;
+  }
+}

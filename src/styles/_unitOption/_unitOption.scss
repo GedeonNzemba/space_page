@@ -1,0 +1,280 @@
+.unitOption {
+  @include flexColumn;
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 50;
+  max-width: 306px;
+
+    // @include for-phone-only {
+    // }
+    @include for-tablet-portrait-only {
+      max-width: 203px;
+    }
+    @include for-tablet-landscape-only {
+      max-width: 203px;
+    }
+    @include for-xsmall-desktop-only {
+      max-width: 203px;
+    }
+    @include for-small-desktop-only {
+      padding: 0 5% 0 5%;
+      max-width: 203px;
+    }
+}
+.unitOptionContainer {
+  position: relative;
+  width: 100%;
+
+    @include for-phone-only {
+      margin-bottom: 5rem;
+      padding-left: 5%;
+    }
+    @include for-tablet-portrait-only {
+      margin-bottom: 5rem;
+      padding-left: 10%;
+    }
+    @include for-tablet-landscape-only {
+    }
+}
+.unitOptionSubContainer {
+  @include flexRow;
+  width: 100%;
+  position: absolute;
+  top: -140px;
+  left: -30px;
+  justify-content: space-between;
+  max-width: 1500px;
+
+    @include for-phone-only {
+      position: relative;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      top: 0;
+      left: 95px;
+    }
+    @include for-tablet-portrait-only {
+      position: relative;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      top: 0;
+      left: 0;
+    }
+    @include for-tablet-landscape-only {
+      top: -130px;
+      left: -10px;
+      max-width: 1000px;
+    }
+    @include for-xsmall-desktop-only {
+      max-width: 1100px;
+    }
+    @include for-small-desktop-only {
+      top: -115px;
+      left: -20px;
+      max-width: 1100px;
+    }
+}
+.unitOptionContent {
+  @include flexColumn;
+  padding: 80px 9px 20px 30px;
+  justify-content: space-between;
+  width: 100%;
+
+    @include for-phone-only {
+      padding: 5% 5% 8% 5%;
+      max-width: 203px;
+    }
+    @include for-tablet-portrait-only {
+      padding: 5% 5% 8% 5%;
+    }
+    @include for-tablet-landscape-only {
+      padding: 14% 5% 8% 5%;
+    }
+    @include for-xsmall-desktop-only {
+      padding: 14% 5% 8% 5%;
+    }
+    @include for-small-desktop-only {
+      padding: 14% 5% 8% 5%;
+    }
+}
+.unitHoverOverlay {
+  position: absolute !important;
+  max-width: 306px;
+  max-height: 395px;
+  top: -4vh;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s ease;
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-landscape-only {
+      top: -2vh;
+      left: -0.5vw;
+      max-width: 163px;
+      max-height: 220px;
+    }
+    @include for-xsmall-desktop-only {
+      top: -6vh;
+      left: -15px;
+      max-width: 230px;
+      max-height: 290px;
+    }
+    @include for-small-desktop-only {
+      top: -6vh;
+      left: -15px;
+      max-width: 230px;
+      max-height: 290px;
+    }
+    @include for-medium-desktop-only {
+      max-width: 290px;
+      max-height: 380px;
+    }
+}
+.unitOptionType {
+  @include colorBorderBottomBlue;
+  width: 100%;
+  font-family: "Brown";
+  font-size: $large-body-copy;
+  padding-bottom: 7%;
+
+    @include for-phone-only {
+      border: none;
+      border-top: 1px solid $blue;
+      padding: 5px 0 0 0;
+      font-size: 18px;
+    }
+    @include for-tablet-portrait-only {
+      border: none;
+      border-top: 1px solid $blue;
+      padding: 5px 0 0 0;
+      font-size: 20px;
+    }
+    @include for-tablet-landscape-only {
+      width: 75%;
+      font-size: $xxsmall-body-copy;
+    }
+    @include for-xsmall-desktop-only {
+      width: 75%;
+      font-size: $base-font-size;
+    }
+    @include for-small-desktop-only {
+      width: 75%;
+      font-size: $base-font-size;
+    }
+    @include for-medium-desktop-only {
+      font-size: $body-copy;
+    }
+}
+.unitOptionDesc {
+  width: 100%;
+  padding-top: 5%;
+  color: $blue;
+  font-size: $xxsmall-body-copy;
+  line-height: 1.4;
+  letter-spacing: -0.42px;
+  margin-bottom: 1rem;
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+    @include for-tablet-landscape-only {
+      font-size: 10px;
+    }
+    @include for-xsmall-desktop-only {
+      font-size: $xxxsmall-body-copy;
+    }
+    @include for-small-desktop-only {
+      font-size: $xxxsmall-body-copy;
+    }
+    @include for-medium-desktop-only {
+      font-size: $xxxsmall-body-copy;
+    }
+}
+.unitOptionCta {
+  @include flexRow;
+  align-items: center;
+  color: $blue;
+  font-family: "Brown";
+  font-size: $xxsmall-body-copy;
+  font-weight: bold;
+
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-only {
+      display: none;
+    }
+    @include for-tablet-landscape-only {
+      font-size: 10px;
+      line-height: 1.2;
+    }
+    @include for-xsmall-desktop-only {
+      font-size: $xxxsmall-body-copy;
+    }
+    @include for-small-desktop-only {
+      font-size: $xxxsmall-body-copy;
+    }
+    @include for-medium-desktop-only {
+      font-size: $xxxsmall-body-copy;
+    }
+}
+.unitOptionCta {
+  width: 100%;
+}
+.unitOptionCta svg {
+  fill: $blue;
+  margin-left: 0.8rem;
+}
+.mobileUnitOptionImageContainer {
+  display: none;
+
+    @include for-phone-only {
+      display: flex;
+      max-height: 183px;
+      margin-bottom: 10px;
+    }
+    @include for-tablet-portrait-only {
+      display: flex;
+    }
+}
+.mobileUnitOptionImages {
+  display: none;
+
+    @include for-phone-only {
+      max-height: 183px;
+      margin-bottom: 5px;
+    }
+    @include for-tablet-portrait-only {
+      max-height: 210px;
+      margin-bottom: 5px;
+    }
+}
+
+@media only screen and (min-width: $break) {
+  
+  .unitOption:hover {
+    color: $light;
+
+    .unitOptionArrowPath {
+      fill: $light;
+    }
+    .unitOptionType {
+      border-bottom: 1px solid $light;
+      color: $light;
+    }
+    .unitOptionDesc {
+      color: $light;
+    }
+    .unitOptionCta {
+      color: $light;
+    }
+    .unitHoverOverlay {
+      opacity: 1;
+    }
+  }
+}

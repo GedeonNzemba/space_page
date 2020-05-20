@@ -1,0 +1,169 @@
+.Calendar_container{
+    position: relative;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    border: 1.1px solid $green;
+}
+
+.calendar {
+    // border: 1.1px solid $green;
+    border-top:none ;
+    margin-right: 15px;
+    border-collapse: separate;
+    border-spacing: 16px;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0 10px;
+    padding-bottom: 10px;
+    // height: 512px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.calendar tbody::before {
+    line-height: 0em;
+}
+.weekDay {
+    border: none;
+    font: 15px "Akkurat";
+    letter-spacing: -0.45px;
+    color: $green;
+    padding: 0;
+    text-align: center;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+.calendarDayEmpty {
+    height: 48px;
+    width: 14.28%;
+    border: 1px solid $green;
+    padding: 0 !important;
+    font-family: "Akkurat";
+    font-size: 16px;
+    color: $green;
+    font-weight: 400;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+@mixin dayMixin {
+    text-align: center;
+    box-sizing: border-box;
+    height: 48px;
+    width: 14.28%;
+    border: 1px solid $green;
+    padding: 0 !important;
+    font-family: "Akkurat";
+    font-size: 16px;
+    color: $green;
+    font-weight: 400;
+    cursor: pointer;
+    color: $green;
+    transition: all 0.3s linear;
+    position: relative;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+.calendarDayNumber {
+    @include dayMixin;
+}
+
+.calendarDayNumber:hover {
+    transition: all 0.3s linear;
+    background-color: $green;
+    color: $light;
+}
+.calendarDayNumberToday {
+    @include dayMixin;
+    background-color: $green;
+    color: $light;
+}
+
+.thead {
+    height: 10px;
+
+}
+
+.disabledDay {
+    @include dayMixin();
+    cursor: default;
+}
+
+.disabledDay:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid $green;
+    width: 64px;
+    transform: rotate(45deg);
+    transform-origin: 0;
+}
+
+.Calendar_header{
+    display: flex;
+    width: 100%;
+    padding: 0 34.72px;
+    padding-top: 26px;
+    padding-left: 30px;
+    justify-content: space-between;
+}
+
+.month_year_heading{
+    font: 400 18px "Akkurat";
+    letter-spacing: -0.54px;
+    -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+.calendarArrowContainer {
+    .leftCalendarArrow {
+        transform: rotate(180deg);
+        fill: $green;
+        z-index: 300;
+        cursor: pointer;
+        height: 22px;
+        width: 22.28px;
+    }
+
+    .rightCalendarArrow {
+        fill: $green;
+        z-index: 300;
+        cursor: pointer;
+        height: 22px;
+        width: 22.28px;
+    }
+    @include justifySBAndAlignCenter;
+    // position: absolute;
+    background-color: transparent;
+    height: 22px;
+    justify-content: space-between;
+    width: 62.3px;
+    display: flex;
+    z-index: 299;
+    // top: 27px;
+    // right: 34.72px;
+    text-align: center;
+    
+}

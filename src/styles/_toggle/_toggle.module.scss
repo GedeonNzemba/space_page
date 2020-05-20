@@ -1,0 +1,59 @@
+
+  .Toggle {
+    position: absolute;
+    top: 35rem;
+    right: 5rem;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+  }
+  
+  .Toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .Slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .Slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  input:checked + .Slider {
+    background-color: #f39121;
+  }
+  
+  input:focus + .Slider {
+    box-shadow: 0 0 1px #f39121;
+  }
+  
+  input:checked + .Slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+  }
+  .Slider.Round {
+    border-radius: 30px;
+  }
+  .Slider.Round:before {
+    border-radius: 50%;
+  }

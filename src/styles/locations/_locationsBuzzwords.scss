@@ -1,0 +1,79 @@
+.locationsBuzzwords {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.locationsBuzzwordsMobile {
+  display: none;
+}
+.locationsBuzzwordParagraph {
+  // color: $light;
+  padding: 1rem;
+  position: absolute;
+}
+
+@import "buzzwordSecurity";
+@import "buzzwordParking";
+@import "buzzwordCoffeeShops";
+@import "buzzwordSupport";
+
+.locationBuzzwordCards {
+  position: absolute;
+  color: $blue;
+  height: 40vh;
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.locationBuzzwordCards img {
+  opacity: 0 !important;
+  transition: all 0.3s ease;
+}
+.locationBuzzwordCards:hover img {
+  opacity: 1 !important;
+}
+.locationBuzzwordCards:hover {
+  background-color: $green;
+  color: $light;
+}
+.locationBuzzwordCardsAfter {
+  background-color: $green;
+  color: $light;
+}
+
+//media
+@media only screen and (max-width: $break) {
+  .locationsBuzzwordDiv {
+    display: none;
+  }
+  .locationsBuzzwords {
+    height: unset;
+    display: none;
+  }
+  .locationsBuzzwordsMobile {
+    color: $blue;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 5%;
+  }
+  .locationsBuzzwordsMobile p {
+    font-family: "Akkurat";
+    font-size: 13pt;
+    margin-bottom: 0.5rem;
+  }
+  .locationsBuzzwordsMobile h1 {
+    font-family: "Brown";
+    font-size: 24pt;
+    font-weight: unset;
+  }
+}
+@media only screen and (max-width: $midBreak) {
+    .locationsBuzzwordParagraph {
+      font-size: 1em;
+    }
+}

@@ -1,0 +1,44 @@
+.locationsBuzzwordsSecurityBefore {
+  left: 15%;
+  transform: translateY(10%);
+}
+.locationsBuzzwordsSecurityBeforeHide {
+  transform: translateY(10%) rotate3d(0, 1, 0, -90deg);
+}
+.locationsBuzzwordsSecurityAfter {
+  left: 15%;
+  transform: translateY(10%) rotate3d(0, 1, 0, 90deg);
+}
+.locationsBuzzwordsSecurityAfterShow {
+  transform: translateY(10%) rotate3d(0, 1, 0, 0deg);
+}
+
+.locationsSecurityAfterImage {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: unset;
+  margin: unset;
+  padding: unset;
+}
+@media only screen and (max-width: $break) {
+  .locationsBuzzwordsSecurityBefore {
+    position: absolute;
+    left: unset;
+    transform:unset;
+  }
+  .locationsBuzzwordsSecurityBeforeHide {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
+  .locationsBuzzwordsSecurityAfter {
+    position: absolute;
+    left: unset;
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  .locationsBuzzwordsSecurityAfterShow {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  .locationsSecurityAfterImage{
+    width: 100%!important;
+  }
+}

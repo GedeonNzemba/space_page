@@ -1,0 +1,41 @@
+.mouseToolTip {
+  cursor: none;
+  pointer-events: none;
+}
+.mouseToolTipCursor {
+  width: 10rem;
+  min-height: 100px;
+  min-width: 10rem;
+}
+
+.mobileCopy {
+  font-family: "Brown";
+  font-size: 52px;
+  font-weight: 100;
+  display: none;
+}
+
+.mainCopy{
+  @include heading
+}
+
+@media only screen and (max-width: $break) {
+  .mobileCopy {
+    display: block;
+  }
+
+  .mainCopy {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+.spacesTextColumn {
+    min-width: -webkit-fill-available;
+    width: 100%;
+    background-color: unset;
+    background: linear-gradient(rgba(229, 232, 232, 0.95), rgba(229, 232, 232, 0));
+    /* border-right: 2px solid blue; */
+    border-right-color: inherit;
+}
+}

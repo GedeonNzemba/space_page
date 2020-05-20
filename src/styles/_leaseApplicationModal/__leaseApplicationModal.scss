@@ -1,0 +1,85 @@
+$widthModal: 1280px;
+$leftMargin: -640px;
+.leaseApplicationModal {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: $widthModal;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: $leftMargin;
+    padding: 54px 84px;
+    background: $light;
+    background-position: fixed;
+    box-sizing: border-box;
+    // visibility: hidden;
+    // opacity: 0;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px); 
+    transform: translateY(10px);
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    z-index: 502;
+    opacity: 1;
+    margin-bottom: 50px;
+}
+
+.leaseApplicationModal_hidden {
+    display: none;
+}
+
+.UnitLocationContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.PL_Stamp_red {
+    margin-bottom: -15px;
+    height: 128px;
+}
+
+.locationCopy {
+    display: flex;
+    flex-direction: column;
+    height: 128px;
+    // padding: 10px 0;
+    justify-content: center;
+    margin-right: 34px;
+    padding-top: 5px;
+}
+
+.locationCopy p {
+    text-align: right;
+    font: 400 17px "Akkurat";
+    letter-spacing: -0.51px;
+    color: $green;
+    margin-bottom: 12px;
+}
+.CapeTownText {
+    margin-bottom: 0;
+}
+
+.closeModal_LeaseModal {
+    height: 19.94px;
+    position: absolute;
+    top: 28px;
+    right: 32px;
+    cursor: pointer;
+}
+
+.leaseApplication_content {
+    margin-top: 66px;
+    display: flex;
+    flex-direction: column;
+}
+
+.applicationCopy {
+    font: 400 17px "Akkurat";
+    color: $green;
+    width: 632px;
+    height: 93px;
+    margin: 0;
+    padding: 0;
+}

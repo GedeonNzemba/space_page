@@ -1,0 +1,73 @@
+@mixin brownFourHundred {
+  font-family: "brown";
+  font-weight: 400;
+}
+
+@mixin akkuratGreen {
+  font-family: "akkurat";
+  color: $green;
+}
+
+@mixin heading {
+  @include brownFourHundred;
+  color: $blue;
+  font-size: $main-heading-copy;
+  line-height: $base-line-height;
+}
+
+@mixin subHeading {
+  @include brownFourHundred;
+  color: $blue;
+  font-size: $sub-heading-copy;
+  line-height: $base-line-height;
+}
+
+@mixin bodyCopy {
+  font-family: "akkurat";
+  font-size: $body-copy;
+  line-height: $base-line-height;
+  color: $blue;
+
+    @include for-tablet-portrait-only {
+			font-size: 14px;
+    }
+}
+
+@mixin mainQuote {
+  @include akkuratGreen;
+  width: 100%;
+  max-width: 70%;
+  font-size: $xlarge-body-copy;
+  line-height: $base-line-height;
+}
+
+@mixin subQuote {
+  @include akkuratGreen;
+  height: 20vh;
+  width: 100%;
+  font-size: $large-body-copy;
+  line-height: $base-line-height;
+
+    @include for-xsmall-desktop-only {
+      font-size: $base-font-size;
+    }
+    @include for-small-desktop-only {
+      font-size: $body-copy;
+      min-height: 300px;
+    }
+    @include for-medium-desktop-only {
+      font-size: $body-copy;
+    }
+}
+
+.wrappedTextOrange{
+  color: $orange;
+}
+
+.wrappedTextBlue{
+  color: $blue;
+}
+
+.wrappedTextRed{
+  color: $red;
+}
