@@ -75,15 +75,15 @@
     }
   }
 
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 62em) {
     .carousel-image--4 img {
       display: block;
       width: 100%;
-      height: 50%!important;
+      height: 80vh!important;
   }
   #button_4{
-    bottom: 2rem;
-    right: 15%;
+    bottom: 0;
+    left: 0;
   }
   }
  

@@ -38,6 +38,7 @@
     "react-helmet": "^5.2.1",
     "react-loadable": "^5.5.0",
     "react-medium-image-zoom": "^4.3.0",
+    "react-rotating-text": "^1.4.1",
     "react-slick": "^0.26.1",
     "react-sticky-mouse-tooltip": "0.0.1",
     "styled-components": "^5.1.0",

@@ -5,6 +5,12 @@
   z-index: 220;
   width: 100%;
   padding: 1% 5%;
+
+  @include respond(for-big-desktop-only) {
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 .navbar {

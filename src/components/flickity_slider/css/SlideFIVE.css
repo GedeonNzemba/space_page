@@ -78,11 +78,11 @@
     .carousel-image--5 img {
       display: block;
       width: 100%;
-      height: 50%!important;
+      height: 80vh!important;
   }
   #button_5 {
-    bottom: 2rem;
-    left: 15%;
+    bottom: 0;
+    right: 0;
   }
   
   

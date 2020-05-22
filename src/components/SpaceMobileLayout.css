@@ -31,8 +31,14 @@
 .content-image:not(.no--margin) {
   margin-top: 10rem;
 }
-@media (min-width: 43.8125em) {
+@media (min-width: 48.0625em) {
   #tab_wrapper{
     display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  #tab_wrapper{
+    display: block;
   }
 }

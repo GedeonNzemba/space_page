@@ -173,6 +173,8 @@
         }
     }
 
+    
+
     // FOR x-SMALL DESKTOP ONLY
     @if $breakpoint == for-xsmall-desktop-only {
         @media (min-width: 75em) and (max-width: 85.3125em) { // min-width 1200px & max-width 1365px

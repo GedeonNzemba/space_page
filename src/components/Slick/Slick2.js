@@ -48,7 +48,7 @@ class Slick2 extends React.Component {
             infinite: true,
             speed: 500,
             slidesToShow: 1.,
-            arrows: false,
+            arrows: true,
             initialSlide: 1,
             slideToScroll: true,
             className: "slides_2"

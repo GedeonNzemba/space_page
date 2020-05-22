@@ -1,9 +1,26 @@
-import React, { useRef, useState, useEffect} from "react"
+import React, { useRef, useState, useEffect } from "react"
+
 // flickity slider
 import Slider from '../components/flickity_slider/js/Slider'
 import SliderTWO from '../components/flickity_slider/js/Slider_2'
 import SliderTHREE from "../components/flickity_slider/js/Slide_3"
 
+// SLICK SLIDER
+import Slick from "../components/Slick/Slick"
+import Slick2 from "../components/Slick/Slick2"
+import Slick3 from "../components/Slick/Slick3"
+import Slick4 from "../components/Slick/Slick4"
+import Slick5 from "../components/Slick/Slick5"
+import SliderMedium1 from '../components/flickity_slider/js/Slider_medium1'
+import SliderFOUR from "../components/flickity_slider/js/Slide_4"
+import SliderFIVE from "../components/flickity_slider/js/Slide_5"
+
+// INLINE STYLE
+import styled from 'styled-components'
+
+// LAYOUT FOR TABLET BREAKPOINT
+import SpaceMobileLayout from "../components/SpaceMobileLayout"
+import ctaSmall from "../components/cta/ctaSmall"
 import Layout from "../components/layout"
 import styles from "../styles/stylesheet.module.css"
 import SEO from "../components/seo"
@@ -15,18 +32,14 @@ import Backdrop from "../components/backdrop"
 import SVG from "../components/svgs/svg"
 import WrappedText from "../components/wrappedText/wrappedText"
 import IMG from '../components/imgs/img'
-import SliderFOUR from "../components/flickity_slider/js/Slide_4"
-import SliderFIVE from "../components/flickity_slider/js/Slide_5"
-import styled from 'styled-components'
-import Carousel from "../components/flickity_slider/flickity_mobile/Slider_mobile1"
-import SpaceMobileLayout from "../components/SpaceMobileLayout"
-import Slick from "../components/Slick/Slick"
-import SliderMedium1 from '../components/flickity_slider/js/Slider_medium1'
-import Slick2 from "../components/Slick/Slick2"
-import Slick3 from "../components/Slick/Slick3"
-import Slick4 from "../components/Slick/Slick4"
-import Slick5 from "../components/Slick/Slick5"
-import ctaSmall from "../components/cta/ctaSmall"
+
+
+
+
+
+
+
+
 
 
 
@@ -88,11 +101,11 @@ const Spaces = props => {
   const equipmentRow3 = ["Pots, pans and cutlery", "Fridge/freezer", "Proper welcome pack ", "Biometric access", "Unlimited WiFi", "Access to our Swift App"].map(equ => <li className={styles.equipTitles}>-{" " + equ}</li>)
 
   const scrollRight = (target) => {
-    target.scrollLeft+=590;
+    target.scrollLeft += 590;
   }
 
   const scrollLeft = (target) => {
-    target.scrollLeft-=590
+    target.scrollLeft -= 590
   }
 
   useEffect(() => {
@@ -288,15 +301,19 @@ const Spaces = props => {
     }, time)
   }
 
- 
 
-  const data = useStaticQuery  (graphql`
+  //  TEMPORARY TYPEWRITE IMPLEMENTATION
+  var ReactRotatingText = require('react-rotating-text');
+
+  // THE GRAPHQL QUERY
+  const data = useStaticQuery(graphql`
     query {
      
 
-      spacesHero: file(relativePath: { eq: "1.png" }) {
+      spacesHero: file(relativePath: { eq: "1.png"}) {
         childImageSharp  {
-          fixed(width: 1600, height: 1000) {
+          fixed(width: 1600) {
+            aspectRatio
             ...GatsbyImageSharpFixed
           }
         }
@@ -330,33 +347,37 @@ const Spaces = props => {
   return (
     <Layout>
       <SEO title="Spaces" />
-      <div data-scroll>
+      <div data-scroll className="main-wrapper">
         <Backdrop
           show={showModal}
           clicked={() => {
             setShowModal(false)
           }}
         />
+
         {/* HEADER */}
+
         <div className={styles.spacesContainer}>
           <div className={styles.spacesTextColumn}>
             <h1 className={styles.headingSpaces} id="headingSpaces--main">
-              We Create Functional <br />
+              <ReactRotatingText items={['We Create Founctional']} /> <br />
               Spaces With You <br />
               In Mind
            </h1>
-           <h1 className={styles.headingSpaces__tab} id="headingSpaces--tab">
+
+            <h1 className={styles.headingSpaces__tab} id="headingSpaces--tab">
               We Have Created Functional Spaces With You In Mind
            </h1>
             <p className={styles.spacesBodyCopy}>
-              We created space for everybody, from those who value their own company to the sociable
-               weaver among us. Please explore our options to see what best suits you.
+              We create spaces for <span>everybody</span>, from those who value their own
+              company to the sociable weavers among us. Please <span>explore</span> our
+              options to see what best suits you.
            </p>
 
             <div className="button-desktop">
-            <Cta title="View Our Spaces"></Cta>
+              <Cta title="View Our Spaces"></Cta>
             </div>
-            
+
 
 
             <div className={styles.spacesSocialsDiv}>
@@ -407,10 +428,9 @@ const Spaces = props => {
 
           </div>
           <div className={styles.spacesHero} >
-          <Img fixed={data.spacesHero.childImageSharp.fixed } 
-            imgStyle={{ objectFit: 'contain' }}
+            <Img fixed={data.spacesHero.childImageSharp.fixed}
+              imgStyle={{ objectFit: 'contain' }}
             />
-            
             {/* <p className={styles.studentAccomText}>Student Accomodation</p> */}
 
           </div>
@@ -471,172 +491,141 @@ const Spaces = props => {
           animateF={animatedPaths}
           time={1000}
         />
-        
-         <SpaceMobileLayout 
-          slider_1= {<Slick />}
+        {/* header ends here */}
+
+        {/************ LAYOUT FOR TABLET AND < BELOW *****************/}
+        <SpaceMobileLayout
+          slider_1={<Slick />}
           info_1=
-                {<div className={styles.sectionInfoContainer}>
-                  <h2 className={styles.sectionInfoHeading}>
-                    Studio
-                  </h2>
-                  <div className={styles.spaceInfo}>
-                    <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
-                    <div className={styles.divider}></div>
-                    <p className={styles.rightNumberBathroom}>1 En-Suite Bathroom</p>
-                  </div>
-                  <p style={{ fontSize: "16px", margin: 0 }}>
+          {<div className={styles.sectionInfoContainer}>
+            <h2 className={styles.sectionInfoHeading}>
+              Studio
+            </h2>
+            <div className={styles.spaceInfo}>
+              <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
+              <div className={styles.divider}></div>
+              <p className={styles.rightNumberBathroom}>1 En-Suite Bathroom</p>
+            </div>
+            <p style={{ fontSize: "16px", margin: 0 }}>
                     Wanna do yoga in your underwear whilst cooking up a storm?
                     This is for you. Our open plan studio apartments were designed
                     with the ultimate <WrappedText color="red">independent</WrappedText> individual in mind. It comes fully
                     furnished and fitted with <WrappedText color="red">absolutely everything</WrappedText>, from an induction
                     stove and microwave to the pots, pans and cutlery - we want to
                     see you hone in on those master chef cooking skills (or ready made meals).
-                  </p>
-                </div>}
-                slider_2={<Slick2 />}
-                info_2={
-                  <div className={styles.sectionInfoContainer}>
-                  <h2 className={styles.sectionInfoHeading}>
-                    Studio +
-                  </h2>
+            </p>
+          </div>}
+          slider_2={<Slick2 />}
+          info_2={
+            <div className={styles.sectionInfoContainer}>
+              <h2 className={styles.sectionInfoHeading}>
+                Studio +
+              </h2>
 
-                  <div className={styles.spaceInfo}>
-                    <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
-                    <div className={styles.divider}></div>
-                    <p className={styles.rightNumberBathroom}>1 En-Suite Bathroom</p>
-                  </div>
-                  <p style={{ fontSize: "16px", margin: 0 }}>
+              <div className={styles.spaceInfo}>
+                <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
+                <div className={styles.divider}></div>
+                <p className={styles.rightNumberBathroom}>1 En-Suite Bathroom</p>
+              </div>
+              <p style={{ fontSize: "16px", margin: 0 }}>
                     Our studio+ apartments offer Xm<sup>2</sup> of open plan living, furnished and fitted with absolutely everything.
                     It features a <WrappedText color="red">modern</WrappedText> and ergonomically designed kitchenette, lounge area, desk space and bed.
                     Each apartment comes with a <WrappedText color="red">Juliette balcony</WrappedText>, with the exception of those from the 4th floor up.
-                  </p>
-                </div>
-                }
-                slider_3={<Slick3 />}
-                info_3={
-                  <div className={styles.sectionInfoContainer}>
-                  <h2 className={styles.sectionInfoHeading}>
-                    Two Bedroom
-                  </h2>
-                  <div className={styles.spaceInfo}>
-                    <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
-                    <div className={styles.divider}></div>
-                    <p className={styles.rightNumberBathroom}>2 En-Suite Bathroom</p>
-                  </div>
-                  <p style={{ fontSize: "16px", margin: 0 }}>
+              </p>
+            </div>
+          }
+          slider_3={<Slick3 />}
+          info_3={
+            <div className={styles.sectionInfoContainer}>
+              <h2 className={styles.sectionInfoHeading}>
+                Two Bedroom
+              </h2>
+              <div className={styles.spaceInfo}>
+                <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
+                <div className={styles.divider}></div>
+                <p className={styles.rightNumberBathroom}>2 En-Suite Bathroom</p>
+              </div>
+              <p style={{ fontSize: "16px", margin: 0 }}>
                     Got an ideal living partner or looking to find one? These two bedroom apartments are
                     perfect for those who like <WrappedText color="red">sharing</WrappedText> their <WrappedText color="red">space</WrappedText> (but not too much of it).
                     Each bedroom has its own en-suite bathroom, with a living area and kitchen to
                     share with your fellow mate.
-                  </p>
-                </div>
-                }
-                slider_4={<Slick4 />}
-                info_4={
-                  <div className={styles.sectionInfoContainer}>
-                  <h2 className={styles.sectionInfoHeading}>
-                    Three Bedroom
-                  </h2>
-                  <div className={styles.spaceInfo}>
-                    <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
-                    <div className={styles.divider}></div>
-                    <p className={styles.rightNumberBathroom}>3 En-Suite Bathroom</p>
-                  </div>
-                  <p style={{ fontSize: "16px", margin: 0 }}>
+              </p>
+            </div>}
+
+          slider_4={<Slick4 />}
+          info_4={
+            <div className={styles.sectionInfoContainer}>
+              <h2 className={styles.sectionInfoHeading}>
+                Three Bedroom
+              </h2>
+              <div className={styles.spaceInfo}>
+                <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
+                <div className={styles.divider}></div>
+                <p className={styles.rightNumberBathroom}>3 En-Suite Bathroom</p>
+              </div>
+              <p style={{ fontSize: "16px", margin: 0 }}>
                     Two’s company, three’s a crowd. Our three bed option offers you your own <WrappedText color="red">personal </WrappedText>
                     space as well as a lounge area to have the ultimate movie nights. All of our apartments
                     are <WrappedText color="red">fully</WrappedText> fitted and furnished to make your transition to apartment living as
                     seamless as possible. Each room has their own wardrobe and desk space, whilst the
                     <WrappedText color="red"> lounge</WrappedText> and kitchen are modern and ergonomically designed to allow for ample space and movement.
-                  </p>
-                </div>
-                }
-                slider_5={<Slick5 />}
-                info_5={
-                  <div className={styles.sectionInfoContainer}>
-                  <h2 className={styles.sectionInfoHeading}>
-                    Four Bedroom
-                  </h2>
-                  <div className={styles.spaceInfo}>
-                    <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
-                    <div className={styles.divider}></div>
-                    <p className={styles.rightNumberBathroom}>4 En-Suite Bathroom</p>
-                  </div>
-                  <p style={{ fontSize: "16px", margin: 0 }}>
+              </p>
+            </div>}
+
+          slider_5={<Slick5 />}
+          info_5={
+            <div className={styles.sectionInfoContainer}>
+              <h2 className={styles.sectionInfoHeading}>
+                Four Bedroom
+              </h2>
+              <div className={styles.spaceInfo}>
+                <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>
+                <div className={styles.divider}></div>
+                <p className={styles.rightNumberBathroom}>4 En-Suite Bathroom</p>
+              </div>
+              <p style={{ fontSize: "16px", margin: 0 }}>
                     If you are our defined version of a sociable weaver, this is the option for you.
                     Come with a group of <WrappedText color="red">mates</WrappedText> or find them here. All of our apartments are fully fitted
                     and furnished to make your transition to apartment living as <WrappedText color="red">seamless</WrappedText> as possible.
                     Each room has their own wardrobe and desk space, whilst the lounge and kitchen are
                     modern and ergonomically designed to allow for ample space and movement.
-                  </p>
-                </div>
-                }
-        /> 
-        
-          {/* START OF SPACE MAIN */}
-        <div className={styles.spacesSectionsContainer}>
+              </p>
+            </div>}
+        />
+        {/******************** LAYOUT FOR TABLET AND BELOW ENDS HERE*********/}
 
+
+        {/* START OF SPACE MAIN */}
+
+        <div className={styles.spacesSectionsContainer}>
           <div className={styles.imageContentSpaces}>
             <div className={styles.imageAnimationItem}>
               <div className={styles.basicSectionLeftContainer}>
-
                 <div className={styles.horizontalScrollContainer} ref={scrollRefOne}>
-                  
-                <SliderMedium1 />
-                 {/* <IMG
-                    ref={studioRefOne}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  />
-                  <IMG
-                    ref={studioRefTwo}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  />
-                  <IMG
-                    ref={studioRefThree}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  /> 
-                  */}
-
+                  <SliderMedium1 />
                 </div>
-
                 <div className={styles.desktopImages} ref={scrollDesktopRefOne}>
-                  
+                  <Slider />
+                  <div className={styles.arrowsPictureLeft_top} id="button_one">
+                    <div className="button-group" id="button_one">
+                      <div className="button button--previous-one">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow} onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
+                    </div>
 
-              
-                 <Slider />
-                
-                
-
-                 
-                  {/* <IMG
-                    // ref={studioRefOne}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  /> */}
+                    <div className="button-group" id="button_one">
+                      <div className="button button--next-one">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow} onClick={() => { scrollRight(scrollDesktopRefOne.current) }}>
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className={styles.arrowsPictureLeft} id="button_1">
-                  
-                  <div className="button-group" id="btn">
-                    <div className="button button--previous-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow}  onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
-                    </div>
-                    </div>
 
-                    <div className="button-group" id="btn">
-                    <div className="button button--next-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow}  onClick={() => { scrollRight(scrollDesktopRefOne.current)}}>
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
-                    </div>
-                    </div>
-                  
-
-                </div>
 
                 <div className={styles.sectionInfoContainer}>
                   <h2 className={styles.sectionInfoHeading}>
@@ -702,62 +691,30 @@ const Spaces = props => {
                   </p>
                 </div>
 
-                <div className={styles.horizontalScrollContainer} ref={scrollRefTwo}>
-                  {/* <IMG
-                    ref={studioPlusRefOne}
-                    imageSection={styles.spacesRightSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  />
-                  <IMG
-                    ref={studioPlusRefTwo}
-                    imageSection={styles.spacesRightSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  />
-                  <IMG
-                    ref={studioPlusRefThree}
-                    imageSection={styles.spacesRightSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  /> */}
-
-                </div>
+                <div className={styles.horizontalScrollContainer} ref={scrollRefTwo}></div>
 
                 <div className={styles.desktopImages} ref={scrollDesktopRefTwo}>
                   <SliderTWO />
-                  {/* <IMG
-                    // ref={studioPlusRefOne}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  />
-                  <IMG
-                    // ref={studioPlusRefTwo}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  />
-                  <IMG
-                    // ref={studioPlusRefThree}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  /> */}
-                </div>
-                <div className={styles.arrowsPictureRight} id="button_2">
-
-                <div className="button-group" id="button">
-                    <div className="button button--previous btn--previous">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow}  onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
-                    </div>
+                  {/* BUTTON 2 */}
+                  <div className={styles.arrowsPictureRight} id="button_2">
+                    <div className="button-group" id="button">
+                      <div className="button button--previous btn--previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow} onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
                     </div>
 
                     <div className="button-group" id="button">
-                    <div className="button button--next btn--next">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow}  onClick={() => { scrollRight(scrollDesktopRefOne.current)}}>
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
+                      <div className="button button--next btn--next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow} onClick={() => { scrollRight(scrollDesktopRefOne.current) }}>
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
                     </div>
-                    </div>
-
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -788,62 +745,28 @@ const Spaces = props => {
             <div className={styles.imageAnimationItem}>
               <div className={styles.basicSectionLeftContainer}>
 
-                <div className={styles.horizontalScrollContainer} ref={scrollRefThree}>
-
-                  {/* <IMG
-                    ref={twoBedRefOne}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  />
-                  <IMG
-                    ref={twoBedRefTwo}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  />
-                  <IMG
-                    ref={twoBedRefThree}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  /> */}
-
-                </div>
-
+                <div className={styles.horizontalScrollContainer} ref={scrollRefThree}></div>
                 <div className={styles.desktopImages} ref={scrollDesktopRefThree}>
                   <SliderTHREE />
-                  {/* <IMG
-                    // ref={twoBedRefOne}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  />
-                  <IMG
-                    // ref={twoBedRefTwo}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  />
-                  <IMG
-                    // ref={twoBedRefThree}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  /> */}
-                </div>
-                <div className={styles.arrowsPictureLeft} id="button_3">
-
-                <div className="button-group" id="button">
-                    <div className="button button--previous btn--previous btn--previous_3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow}  onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
-                    </div>
+                  <div className={styles.arrowsPictureLeft} id="button_3">
+                    <div className="button-group" id="button">
+                      <div className="button button--previous btn--previous btn--previous_3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow} onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
                     </div>
 
                     <div className="button-group" id="button">
-                    <div className="button button--next btn--next btn--next_3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow}  onClick={() => { scrollRight(scrollDesktopRefOne.current)}}>
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
+                      <div className="button button--next btn--next btn--next_3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow} onClick={() => { scrollRight(scrollDesktopRefOne.current) }}>
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
                     </div>
-                    </div>
+                  </div>
                 </div>
+
                 <div className={styles.sectionInfoContainer}>
                   <h2 className={styles.sectionInfoHeading}>
                     Two Bedroom
@@ -895,61 +818,26 @@ const Spaces = props => {
                   </p>
                 </div>
 
-                <div className={styles.horizontalScrollContainer} ref={scrollRefFour}>
-                  {/* <IMG
-                    ref={threeBedRefOne}
-                    imageSection={styles.spacesRightSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  />
-                  <IMG
-                    ref={threeBedRefTwo}
-                    imageSection={styles.spacesRightSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  />
-                  <IMG
-                    ref={threeBedRefThree}
-                    imageSection={styles.spacesRightSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  /> */}
-
-                </div>
-
+                <div className={styles.horizontalScrollContainer} ref={scrollRefFour}></div>
                 <div className={styles.desktopImages} ref={scrollDesktopRefFour}>
                   <SliderFOUR />
-                  {/* <IMG
-                    // ref={threeBedRefOne}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  />
-                  <IMG
-                    // ref={threeBedRefTwo}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  />
-                  <IMG
-                    // ref={threeBedRefThree}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.modernLifeWrap}
-                  /> */}
-                </div>
-                <div className={styles.arrowsPictureRight} id="button_4">
-
-                <div className="button-group" id="button">
-                    <div className="button button--previous btn--previous btn--previous_4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow}  onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
-                    </div>
+                  <div className={styles.arrowsPictureRight} id="button_4">
+                    <div className="button-group" id="button">
+                      <div className="button button--previous btn--previous btn--previous_4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow} onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
                     </div>
 
                     <div className="button-group" id="button">
-                    <div className="button button--next btn--next btn--next_4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow}  onClick={() => { scrollRight(scrollDesktopRefOne.current)}}>
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
+                      <div className="button button--next btn--next btn--next_4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow} onClick={() => { scrollRight(scrollDesktopRefOne.current) }}>
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
                     </div>
-                    </div>
-
+                  </div>
                 </div>
               </div>
             </div>
@@ -969,7 +857,6 @@ const Spaces = props => {
             animateF={animatedPaths}
             time={3500}
           />
-
           <SVG
             style={[styles.svgMobileBase, styles.svgMobileFortySix].join(" ")}
             id="mobileSpaces6"
@@ -982,63 +869,38 @@ const Spaces = props => {
           />
           {/* START OF LAST COMPONENT */}
           <div className={styles.imageContentSpaces} style={{ paddingBottom: "12rem" }}>
-
             <div className={styles.imageAnimationItem}>
               <div className={styles.basicSectionLeftContainer}>
-
-                <div className={styles.horizontalScrollContainer} ref={scrollRefFive}>
-
-                  {/* <IMG
-                    ref={fourBedRefOne}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  />
-                  <IMG
-                    ref={fourBedRefTwo}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  />
-                  <IMG
-                    ref={fourBedRefThree}
-                    imageSection={styles.spacesLeftSectionImageContainer}
-                    imageStyle={styles.weaverWrap}
-                  /> */}
-
-                </div>
-                  {/* FOR DESKTOP */}
+                <div className={styles.horizontalScrollContainer} ref={scrollRefFive}></div>
+                {/* FOR DESKTOP */}
                 <div className={styles.desktopImages} ref={scrollDesktopRefFive}>
                   <SliderFIVE />
-
-
-                </div>
-                
-                {/* END OF IMG */}
-                <div className={styles.arrowsPictureLeft} id="button_5">
-
-                <div className="button-group " id="button">
-                    <div className="button button--previous btn--previous btn--previous_5">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow}  onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
-                    </div>
+                  <div className={styles.arrowsPictureLeft} id="button_5">
+                    <div className="button-group " id="button">
+                      <div className="button button--previous btn--previous btn--previous_5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.leftArrow} onClick={() => { scrollLeft(scrollDesktopRefOne.current) }} >
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
                     </div>
 
                     <div className="button-group" id="button">
-                    <div className="button button--next btn--next btn--next_5">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow}  onClick={() => { scrollRight(scrollDesktopRefOne.current)}}>
-                        <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
-                      </svg>
+                      <div className="button button--next btn--next btn--next_5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46.604" height="45.299" viewBox="0 0 46.604 45.299" className={styles.rightArrow} onClick={() => { scrollRight(scrollDesktopRefOne.current) }}>
+                          <path class="a" d="M410.707,319.107l-22.222,22.222a.43.43,0,0,1-.614-.008l-2.526-2.527a.439.439,0,0,1,0-.629l17.937-17.1H364.674a.437.437,0,0,1-.438-.438v-3.663a.431.431,0,0,1,.438-.431h38.608l-17.945-17.1a.425.425,0,0,1-.008-.606l2.549-2.549a.424.424,0,0,1,.6,0l22.237,22.214A.429.429,0,0,1,410.707,319.107Z" transform="translate(-364.236 -296.155)" />
+                        </svg>
+                      </div>
                     </div>
-                    </div>
-
+                  </div>
                 </div>
+                {/* END OF IMG */}
+
 
                 <div className={styles.sectionInfoContainer}>
                   {/* START OF TITLE */}
                   <h2 className={styles.sectionInfoHeading}>
                     Four Bedroom
                   </h2>
-                  {/* START OF TITLE */}
                   {/* START OF SUB TITLE */}
                   <div className={styles.spaceInfo}>
                     <p className={styles.leftLivingArea}>36m<sup>2</sup> Open Plan Living</p>

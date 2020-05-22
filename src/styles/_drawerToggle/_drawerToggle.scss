@@ -49,6 +49,11 @@
 
 @media (min-width: $break) {
   .DrawerToggle {
-    display: block;
+    display: none;
+  }
+  @media (max-width: $break) {
+    .DrawerToggle {
+      display: block;
+    }
   }
 }

@@ -82,6 +82,11 @@ class Slick extends React.Component {
                                     src={photo.picture}
                                     width="100%"
                                     height="100%"
+                                    style={{
+                                        outline: "none",
+                                        border: "none",
+                                        borderStyle: "none"
+                                    }}
                                     />
                                 </picture>
                             </Zoom>
